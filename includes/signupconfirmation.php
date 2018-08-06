@@ -1,5 +1,8 @@
 <?php
 if (isset($_POST['aggree'])) {
+    ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
     try {
         
         $email = $_POST['email'];
@@ -30,6 +33,7 @@ if (isset($_POST['aggree'])) {
         }else {
             echo "<h5> conta criada com sucesso faça seu login";
             
+            include 'library/mail1.php';            
         }
         
         $connection->close();

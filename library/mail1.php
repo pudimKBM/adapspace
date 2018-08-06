@@ -1,6 +1,4 @@
 <?php
-    
-    error_reporting(E_ALL);
     use PHPMailer\PHPMailer\PHPMailer;
 
     require "vendor/autoload.php";
@@ -15,28 +13,21 @@
 
 
     $mail->setFrom('adm@adaptspace.com.br','AdaptSpace');
-    $mail->addAddress('adm@adaptspace.com.br', 'AdaptSpace');
+    $mail->addAddress("$email", "$firstname");
     $mail->Subject = 'Bem vido a AdaptSpace';
-    $mail->msgHTML('
+    $mail->msgHTML("
     <html>
     <head>
-    <title>HTML email</title>
+    <title>Confirmaçao de registro</title>
+    <h4> Bem vindo a AdaptSpace </h4>
     </head>
     <body>
-    <p>This email contains HTML Tags!</p>
-    <table>
-    <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    </tr>
-    <tr>
-    <td>John</td>
-    <td>Doe</td>
-    </tr>
-    </table>
+    <p>Ola {$firstname} {$lastname} </p>
+    <p>Bem vindo a AdaptSpace </p>
+    <p>e-mail: {$email} </p>
     </body>
-    </html>');
-    $mail->AltBody= 'ola @ meu gamigo como vai ' ;
+    </html>");
+    $mail->AltBody= "Bem vindo {$firstname} {$lastname}" ;
     
     if (!$mail->send()){
         echo "erro" . $mail->ErrorInfo();
