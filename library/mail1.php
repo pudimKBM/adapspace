@@ -1,7 +1,9 @@
 <?php
+    
+    error_reporting(E_ALL);
     use PHPMailer\PHPMailer\PHPMailer;
 
-    require "../vendor/autoload.php";
+    require "vendor/autoload.php";
     $mail = new PHPMailer();
     $mail->isSMTP();
     $mail->Host = "mx1.hostinger.com.br";
@@ -14,7 +16,7 @@
 
     $mail->setFrom('adm@adaptspace.com.br','AdaptSpace');
     $mail->addAddress('adm@adaptspace.com.br', 'AdaptSpace');
-    $mail->Subject('Bem vido a AdaptSpace');
+    $mail->Subject = 'Bem vido a AdaptSpace';
     $mail->msgHTML('
     <html>
     <head>
@@ -34,7 +36,7 @@
     </table>
     </body>
     </html>');
-    $mail->AltBody('ola @ meu gamigo como vai ');
+    $mail->AltBody= 'ola @ meu gamigo como vai ' ;
     
     if (!$mail->send()){
         echo "erro" . $mail->ErrorInfo();
