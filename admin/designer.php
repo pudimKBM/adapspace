@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Adapt Designer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/fabric.min.js"></script>
+<script type="text/javascript" src="js/tshirtEditor.js"></script>
+<script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
+<script type="text/javascript" src="js/html2canvas.min.js"></script>
+<script type="text/javascript" src="js/FormatMoney.js"></script>
+<script src="js/script.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/elegant-font/html-css/style.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/lightbox2/css/lightbox.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!-- Le styles -->
+<link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<script type="text/javascript">
+	 </script>
+<style type="text/css">
+body {
+	padding-top: 60px;
+}
+.miniColors-triggerWrap{
+
+}
+
+.color-preview {
+	border: 1px solid #CCC;
+	margin: 2px;
+	zoom: 1;
+	vertical-align: top;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	border-radius: 300px;
+}
+
+.rotate {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	/* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+	-ms-transform: rotate(90deg);
+}
+
+.Arial {
+	font-family: "Arial";
+}
+
+.Helvetica {
+	font-family: "Helvetica";
+}
+
+.MyriadPro {
+	font-family: "Myriad Pro";
+}
+
+.Delicious {
+	font-family: "Delicious";
+}
+
+.Verdana {
+	font-family: "Verdana";
+}
+
+.Georgia {
+	font-family: "Georgia";
+}
+
+.Courier {
+	font-family: "Courier";
+}
+
+.ComicSansMS {
+	font-family: "Comic Sans MS";
+}
+
+.Impact {
+	font-family: "Impact";
+}
+
+.Monaco {
+	font-family: "Monaco";
+}
+
+.Optima {
+	font-family: "Optima";
+}
+
+.HoeflerText {
+	font-family: "Hoefler Text";
+}
+
+.Plaster {
+	font-family: "Plaster";
+}
+
+.Engagement {
+	font-family: "Engagement";
+}
+.cor{
+collor: black;
+}
+
+
+</style>
+</head>
+
+<?php
+session_start();
+
+error_reporting(0);
+
+if (! isset($_SESSION['logged_in'])) {
+    header('location : ../index.php');
+}
+ else {
+    $id_category = $_GET['id'];
+    $name_category = $_GET['category'];
+    $caticon = $_GET['icon'];
+    
+    ?>
+
+
+<body class="preview" data-spy="scroll" data-target=".subnav"
+	data-offset="80">
+
+	<!-- Navbar
+    ================================================== -->
+
+<!-- Header -->
+<header class="header1">
+<!-- Header desktop -->
+<div class="container-menu-header">
+
+
+<div class="wrap_header">
+<!-- Logo -->
+<a href="../index.php" class="logo"> <img
+	src="../images/Logo-Space_Prancheta 1.png"
+   >
+    </a>
+    
+    <!-- Menu -->
+    <div class="wrap_menu">
+    <nav class="menu" style="padding-left:180px">
+    <ul class="main_menu">
+    <li><a href="../index.php">Home</a></li>
+    
+    <li> <?php 
+		if (isset($_SESSION['logged-in'])) { 
+			?><a href="admin/designer.php?id=1&category=Camisetas&icon=phone">Criar Campanha <?php
+		}else if(!isset($_SESSION['logged-in'])){ 
+			?><a href="#">Criar Campanha <?php
+		}?>
+		
+		
+		</li>
+   		
+						<?php
+						
+    if (isset($_SESSION['logged_in'])) {
+        ?>
+						
+							<li><a href="../CoolAdmin-master/index.php">Dashboard</a></li>
+						<?php }	?>
+						<li><a href="../cart.php">Carrinho</a></li>
+						<?php if(!isset($_SESSION['logged_in'])){?>
+							<li><a href="../login.php" style="margin-left: 600px;">Entrar</a></li>
+							<?php
+    
+} else {
+        ?>							    
+							<li><a href="../includes/logout.php" style="margin-left: 600px;">Sair</a></li>						
+						<?php 	}?>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- Header Icon -->
+<!--				<div class="header-icons"> -->
+<!-- 					<a href="#" class="header-wrapicon1 dis-block"> <img -->
+<!-- 						src="images/icons/icon-header-01.png" class="header-icon1" -->
+<!-- 						alt="ICON"> -->
+<!-- 					</a> <span class="linedivide1"></span> -->
+
+<!-- 					<div class="header-wrapicon2"> -->
+<!-- 						<img src="images/icons/icon-header-02.png" -->
+<!-- 							class="header-icon1 js-show-header-dropdown" alt="ICON"> <span -->
+<!-- 							class="header-icons-noti">0</span> -->
+
+						<!-- Header cart noti -->
+<!-- 						<div class="header-cart header-dropdown"> -->
+<!-- 							<ul class="header-cart-wrapitem"> -->
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-01.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> White Shirt With -->
+<!-- 											Pleat Detail Back </a> <span class="header-cart-item-info"> 1 -->
+<!-- 											x $19.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-02.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> Converse All Star -->
+<!-- 											Hi Black Canvas </a> <span class="header-cart-item-info"> 1 x -->
+<!-- 											$39.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-03.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> Nixon Porter -->
+<!-- 											Leather Watch In Tan </a> <span class="header-cart-item-info"> -->
+<!-- 											1 x $17.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+
+<!-- 							<div class="header-cart-total">Total: $75.00</div> -->
+
+<!-- 							<div class="header-cart-buttons"> -->
+<!-- 								<div class="header-cart-wrapbtn"> -->
+									<!-- Button -->
+<!-- 									<a href="cart.html" -->
+<!-- 										class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"> -->
+<!-- 										View Cart </a> -->
+<!-- 								</div> -->
+
+<!-- 								<div class="header-cart-wrapbtn"> -->
+									<!-- Button -->
+<!-- 									<a href="#" -->
+<!-- 										class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"> -->
+<!-- 										Check Out </a> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div>-->
+			</div>
+		</div>
+	
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile"> <img
+				src="images/icons/logo.png" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block"> <img
+						src="images/icons/icon-header-01.png" class="header-icon1"
+						alt="ICON">
+					</a> <span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png"
+							class="header-icon1 js-show-header-dropdown" alt="ICON"> <span
+							class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+ 					<!--	<div class="header-cart header-dropdown"> -->
+<!-- 							<ul class="header-cart-wrapitem"> -->
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-01.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> White Shirt With -->
+<!-- 											Pleat Detail Back </a> <span class="header-cart-item-info"> 1 -->
+<!-- 											x $19.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-02.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> Converse All Star -->
+<!-- 											Hi Black Canvas </a> <span class="header-cart-item-info"> 1 x -->
+<!-- 											$39.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+
+<!-- 								<li class="header-cart-item"> -->
+<!-- 									<div class="header-cart-item-img"> -->
+<!-- 										<img src="images/item-cart-03.jpg" alt="IMG"> -->
+<!-- 									</div> -->
+
+<!-- 									<div class="header-cart-item-txt"> -->
+<!-- 										<a href="#" class="header-cart-item-name"> Nixon Porter -->
+<!-- 											Leather Watch In Tan </a> <span class="header-cart-item-info"> -->
+<!-- 											1 x $17.00 </span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+
+<!-- 							<div class="header-cart-total">Total: $75.00</div> -->
+
+<!-- 							<div class="header-cart-buttons"> -->
+<!-- 								<div class="header-cart-wrapbtn"> -->
+									<!-- Button -->
+<!-- 									<a href="cart.html" -->
+<!-- 										class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"> -->
+<!-- 										View Cart </a> -->
+<!-- 								</div> -->
+
+<!-- 								<div class="header-cart-wrapbtn"> -->
+									<!-- Button -->
+<!-- 									<a href="#" -->
+<!-- 										class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"> -->
+<!-- 										Check Out </a> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box"> <span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="wrap-side-menu">
+			<nav class="side-menu">
+				<ul class="main-menu">
+
+					
+
+<!-- 					<li class="item-topbar-mobile p-l-10"> -->
+<!-- 						<div class="topbar-social-mobile"> -->
+<!-- 							<a href="#" class="topbar-social-item fa fa-facebook"></a> <a -->
+<!-- 								href="#" class="topbar-social-item fa fa-instagram"></a> <a -->
+<!-- 								href="#" class="topbar-social-item fa fa-pinterest-p"></a> <a -->
+<!-- 								href="#" class="topbar-social-item fa fa-snapchat-ghost"></a> <a -->
+<!-- 								href="#" class="topbar-social-item fa fa-youtube-play"></a> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+
+					<li class="item-menu-mobile"><a href="index.php">Home</a>
+						</li>
+
+
+					<li class="item-menu-mobile"><a href="admin/designer.php?id=1&category=Camisetas&icon=phone">Designer</a></li>
+
+					
+<?php if(!isset($_SESSION['logged_in'])){?>
+					<li class="item-menu-mobile"><a href="login.php">Login</a></li>
+							<?php
+    
+} else {
+        ?>
+        <li class="item-menu-mobile"><a href="includes/logout.php">Logout</a></li>
+        	<?php 	}?>
+						<?php
+    if (isset($_SESSION['logged_in'])) {
+        ?>							  
+
+					<li class="item-menu-mobile"><a href="CoolAdmin-master/index.php">Dashboard</a></li>
+						<?php }	?>
+						<li><a href="../cart.php">Carrinho</a></li>
+
+					
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container" style="">
+		<section id="typography" style="
+    padding-bottom: 158px;">
+			<div class="">
+				<h2 class="cor">Crie sua estampa</h2>
+			</div>
+
+			<!-- Headings & Paragraph Copy -->
+			<div class="container-fluid">
+				<div class="row">
+
+					<div class="col-12 col-sm-6 col-md-8">
+
+						<div class="col-sm-10">
+							<!-- Only required for left/right tabs -->
+
+							<div class="">
+								<div class="tab-pane active" id="tab1">
+									<div class="">
+										<a class="cor">Você pode selecionar vários produtos em cores diferentes.
+											Clique no produto e veja a mágica acontecer:</a>
+										<!--					      	<h3>Tee Styles</h3>-->
+										<p style="padding-top: 10px;">
+
+											<img value="1" selected="selected" src="img/crew_front1.png"
+												style="width: 100px" />
+											<!--<img value="1" selected="selected" src="img/mens_hoodie_front.png"
+												style="width: 100px" />
+											<img value="1" selected="selected" src="img/mens_longsleeve_front.png"
+												style="width: 100px" />
+											<img value="1" selected="selected" src="img/womens_crew_back.png"
+												style="width: 100px" /> -->
+
+
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div align="center" class="col-6 col-md-4">
+						<div class="col-sm">
+							<h3 class="cor">Mudar Cor</h3>
+							<ul class="col-sm">
+								<li class="color-preview" title="White"
+									style="background-color: #ffffff;"></li>
+									<li class="color-preview" title="Teal Ice"
+									style="background-color: #b8d5d7;"></li>
+									<li class="color-preview" title="Citrus Yellow"
+									style="background-color: #9F9F9F;"></li>
+									<li class="color-preview" title="Dark Chocolate"
+									style="background-color: #EC5E5E;"></li>
+									<li class="color-preview" title="Cherry Red"
+									style="background-color: #c50404;"></li>
+<!-- 								<li class="color-preview" title="Dark Heather" -->
+<!-- 									style="background-color: #616161;"></li> -->
+<!-- 								<li class="color-preview" title="Gray" -->
+<!-- 									style="background-color: #f0f0f0;"></li> -->
+								<li class="color-preview" title="Charcoal"
+									style="background-color: #424242;"></li>
+								<li class="color-preview" title="Black"
+									style="background-color: #222222;"></li>
+									<li class="color-preview" title="Chesnut"
+									style="background-color: #5B6945;"></li>
+<!-- 								<li class="color-preview" title="Heather Orange" -->
+<!-- 									style="background-color: #fc8d74;"></li> -->
+								<li class="color-preview" title="Heather Dark Chocolate"
+									style="background-color: #91DBA1;"></li>
+<!-- 								<li class="color-preview" title="Salmon" -->
+<!-- 									style="background-color: #0DFFA7;"></li> -->
+								
+								
+								
+								
+							
+								
+								
+								
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" id="tab2">
+						<div class="">
+							<h4 class="cor">Adapt sua camisteta ao seu estilo</h4>
+							<div class="input-append">
+								<input class="span2" id="text-string" type="text"
+									placeholder="adicionar texto">
+								<button id="add-text" class="btn" title="Add text">
+									<i class="icon-share-alt"></i>
+								</button>
+								<hr>
+							</div>
+							
+							<form action="Uploadds.php" method="post" enctype="multipart/form-data">
+										Selecione uma imagem para adicionar:
+										<div class= "row" >
+    									<input type="file" name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
+ 										</div>
+							</form>
+							<div id="avatarlist">
+							<?php
+    
+    include '../db.php';
+    $queryfirst = "SELECT * FROM `uploads` WHERE usr_id ='{$_SESSION['id']}' ORDER BY `uploads`.`id` DESC LIMIT 3";
+    $resultfirst = $connection->query($queryfirst);
+    if ($resultfirst->num_rows > 0) {
+        while ($rowfirst = $resultfirst->fetch_assoc() ) {
+            $path = $rowfirst['path'];
+            // ?>
+                       <img style="cursor: pointer; width: 150px;"
+									class="img-polaroid" src="<?=$path; ?>">	
+    							 <?php
+        }
+    }
+    ?>
+								 
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="span6">
+							<div align="center" style="min-height: 32px;">
+								<div class="clearfix">
+								<div class="clearfix">
+							<div class="btn-group inline pull-left" id="texteditor" style="display: block;">						  
+								<button id="font-family" class="btn dropdown-toggle" data-toggle="dropdown" data-original-title="Fonte"><i class="icon-font" style="width:19px;height:19px;" deluminate_imagetype="png"></i></button>		                      
+							    <ul class="dropdown-menu" role="menu" aria-labelledby="font-family-X">
+								    <li><a tabindex="-1" href="#" onclick="setFont('Arial');" class="Arial" data-original-title="">Arial</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Helvetica');" class="Helvetica" data-original-title="">Helvetica</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Myriad Pro');" class="MyriadPro" data-original-title="">Myriad Pro</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Delicious');" class="Delicious" data-original-title="">Delicious</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Verdana');" class="Verdana" data-original-title="">Verdana</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Georgia');" class="Georgia" data-original-title="">Georgia</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Courier');" class="Courier" data-original-title="">Courier</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Comic Sans MS');" class="ComicSansMS" data-original-title="">Comic Sans MS</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact" data-original-title="">Impact</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Monaco');" class="Monaco" data-original-title="">Monaco</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Optima');" class="Optima" data-original-title="">Optima</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Hoefler Text');" class="Hoefler Text" data-original-title="">Hoefler Text</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Plaster');" class="Plaster" data-original-title="">Plaster</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement" data-original-title="">Engagement</a></li>
+				                </ul>
+							    <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png" height="" width=""></button>
+							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""></button>
+							    <button id="text-strike" class="btn" style="" data-original-title="Strike"><img src="img/font_strikethrough.png" height="" width=""></button>
+							 	<button id="text-underline" class="btn" style="" data-original-title="Underline"><img src="img/font_underline.png"></button>
+								 <a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color">
+								 <input type="hidden" id="text-fontcolor" class="color-picker miniColors" size="7" value="#d61717" maxlength="7" autocomplete="off">
+								 
+								</a>
+						 		
+								<!--  Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --> 
+							</div>							  
+							<div class="pull-right" align="" id="imageeditor" style="display: block;">
+							  <div class="btn-group">										      
+							      <button class="btn" id="bring-to-front" data-original-title="Trazer para frente"><i class="icon-fast-backward rotate" style="height:19px;" deluminate_imagetype="png"></i></button>
+							      <button class="btn" id="send-to-back" data-original-title="Mandar para tras"><i class="icon-fast-forward rotate" style="height:19px;" deluminate_imagetype="png"></i></button>
+							      <button id="flip" type="button" class="btn" data-original-title="Mostrar costas"><i class="icon-retweet" style="height:19px;" deluminate_imagetype="png"></i></button>
+							      <button id="remove-selected" class="btn" data-original-title="Deletar item selecionado"><i class="icon-trash" style="height:19px;" deluminate_imagetype="png"></i></button>
+							  </div>
+							</div>			  
+						</div>
+								
+										
+									<div class="pull-right" align="" id="imageeditor"
+										style="visibility: hidden;">
+										<div class="btn-group">
+											<button class="btn" id="bring-to-front"
+												title="Bring to Front">
+												<i class="icon-fast-backward rotate" style="height: 19px;"></i>
+											</button>
+											<button class="btn" id="send-to-back" title="Send to Back">
+												<i class="icon-fast-forward rotate" style="height: 19px;"></i>
+											</button>
+											<button id="flip" type="button" class="btn"
+												title="Show Back View">
+												<i class="icon-retweet" style="height: 19px;"></i>
+											</button>
+											<button id="remove-selected" class="btn"
+												title="Delete selected item">
+												<i class="icon-trash" style="height: 19px;"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div id="shirtDiv" class="page "
+									style="width: 530px; height: 630px; position: relative; background-color: rgb(255, 255, 255);">
+									<img id="tshirtFacing" src="img/crew_front1.png"></img>
+									<div id="drawingArea"
+										style="position: absolute; top: 100px; left: 160px; z-index: 10; width: 200px; height: 400px;">
+										<canvas id="tcanvas" width=200 height="400" class="hover"
+											style="-webkit-user-select: none;"></canvas>
+									</div>
+								</div>
+							</div>
+							<!--					<div id="shirtBack" class="page" style="width: 530px; height: 630px; position: relative; background-color: rgb(255, 255, 255); display:none;"> -->
+							<!--						<img src="img/crew_back.png"></img>-->
+							<!--						<div id="drawingArea" style="position: absolute;top: 100px;left: 160px;z-index: 10;width: 200px;height: 400px;">					-->
+							<!--							<canvas id="backCanvas" width=200 height="400" class="hover" style="-webkit-user-select: none;"></canvas> -->
+							<!--						</div>-->
+							<!--					</div>						-->
+
+							<!--	/EDITOR		-->
+						</div>
+					</div>
+
+
+				</div>
+				
+			</div>
+			</div>
+			<div class="row">
+			<button type="button"
+				class="btn btn-large btn-block col-sm-3 btn-success"
+				name="addToTheBag" id="addToTheBag" style=" 
+	margin-left: 50%;
+   ">Próximo</button>
+			<!--	EDITOR      -->
+			</div>
+			</div>
+			
+
+
+		</section>
+		<section id="vrau">
+			<div class="container-fluid">
+				<div class="row">
+
+
+					<div class="col-3" style="width: 300px;">
+						<h3>Preço</h3>
+						<p>
+
+							<img id="imagem" alt="" src="">
+						
+						
+						<table class="table" class="col-3">
+							<tr>
+								<td>Preço mínimo</td>
+								<td align="right" id="cfixo" value="">R$45.00</td>
+							</tr>
+							<tr>
+								<td>Vender por</td>
+								<td  align="right">R$ <input type="number" name="preço-variavel"
+									id="Prc" style="width: 60px;"></td>
+							</tr>
+							<tr>
+								<td><strong>Lucro</strong></td>
+								<td align="right" id="val"><strong></strong></td>
+							</tr>
+						</table>
+						
+					</div>
+					<div class="col-sm-6">
+						<table class="table">
+							<tr>
+								<td><strong>itens</strong></td>
+								<td><strong>ganho p/unidade</strong></td>
+								<td><strong>total</strong></td>
+							</tr>
+							<tr>
+								<td>50</td>
+								<td id="c"></td>
+								<td id="c2"></td>
+							</tr>
+							<tr>
+								<td>100</td>
+								<td id="d"></td>
+								<td id="d2"></td>
+							</tr>
+							<tr>
+								<td>150</td>
+								<td id="e"></td>
+								<td id="e2"></td>
+							</tr>
+							<tr>
+								<td>200</td>
+								<td id="f"></td>
+								<td id="f2"></td>
+							</tr>
+							<tr>
+								<td>250</td>
+								<td id="g"></td>
+								<td id="g2"></td>
+							</tr>
+							<tr>
+								<td>300</td>
+								<td id="h"></td>
+								<td id="h2"></td>
+							</tr>
+							<tr>
+								<td>350</td>
+								<td id="i"></td>
+								<td id="i2"></td>
+							</tr>
+							<tr>
+								<td>400</td>
+								<td id="j"></td>
+								<td id="j2"></td>
+							</tr>
+							<tr>
+								<td>450</td>
+								<td id="k"></td>
+								<td id="k2"></td>
+							</tr>
+							<tr>
+								<td>500</td>
+								<td id="l"></td>
+								<td id="l2"></td>
+							</tr>
+							<tr>
+								<td>501 +</td>
+								<td id="m"></td>
+								<td id="m2"></td>
+							</tr>
+
+						</table>
+						
+
+
+
+					</div>
+					<div class=col-sm>
+							<?php $data = date("Y-m-d"); ?>
+							<h3>
+								<strong>Tempo de campanha</strong>
+							</h3>
+
+							<label> Data Início: <input id="dataInicio" type="date"
+								value=<?php echo $data?> disabled />
+							</label>
+							<form>
+								Tempo de campanha<br> <label>7 dias</label><input type="radio"
+									name="dias" id="d7"><input type="date" id="dataFinal" disabled><br>
+								<label>14 dias</label><input type="radio" name="dias" id="d14"><input
+									type="date" id="dataFinal1" disabled><br> <label>21 dias</label><input
+									type="radio" name="dias" id="d21"><input type="date"
+									id="dataFinal2" disabled> <br>
+							</form>
+							<input id="image1" type="text" value="" hidden> <input id="image2"
+								type="text" value="" hidden>
+						</div>
+
+
+				</div>
+				<div class="row">
+				<button type="button"
+					class="btn btn-large btn-block col-sm-3 btn-success"
+					name="addToTheBag" id="addToTheBag3">Voltar</button>
+				<button type="button" data-toggle="popover" title="Voçe esqueceu alguma coisa" data-content="Cheque o preço e a data de começo da campanha" data-placement="top"
+					class="btn btn-large btn-block col-sm-3 btn-success" style="margin-left: 560px;"
+					name="addToTheBag" id="addToTheBag2">Próximo</button>
+				</div>	
+			</div>
+			<div class="alert alert-danger" id="alerta" role="alert">
+  A simple danger alert with  Give it a click if you like.
+</div>
+		</section>
+		<section id="vrau2">
+
+			<div class="container">
+				<div class="row">
+
+					
+					<div class="container bgwhite p-t-35 p-b-80">
+						<div class="flex-w flex-sb">
+							<div class="w-size13 p-t-30 respon5">
+								<div class="wrap-slick3 flex-sb flex-w">
+									<div class="wrap-slick3-dots"></div>
+
+									<div class="slick3">
+										<div id="xd2" class="item-slick3" data-thumb="">
+											<div class="wrap-pic-w">
+												<img id="xd" src="" alt="IMG-PRODUCT">
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+
+							<div class="w-size14 p-t-30 respon5">
+								<h4 id="n" class="product-detail-name m-text16 p-b-13">Boxy
+									T-Shirt with Roll Sleeve Detail</h4>
+
+								<span id="prc" class="m-text17"> </span>
+
+								<p id="desc" class="s-text8 p-t-10">Nulla eget sem vitae eros
+									pharetra viverra. Nam vitae luctus ligula. Mauris consequat
+									ornare feugiat.</p>
+
+								<!--  -->
+								<div class="p-t-33 p-b-60">
+									<div class="flex-m flex-w p-b-10">
+										<div class="s-text15 w-size15 t-center">Tamanho</div>
+
+										<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
+											<select class="selection-2" name="size">
+
+												<option>P</option>
+												<option>M</option>
+												<option>G</option>
+												<option>GG</option>
+											</select>
+										</div>
+									</div>
+
+
+									<div class="flex-r-m flex-w p-t-10">
+										<div class="w-size16 flex-m flex-w">
+											<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
+												<button
+													class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+													<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+												</button>
+
+												<input class="size8 m-text18 t-center num-product"
+													type="number" name="num-product" value="1">
+
+												<button
+													class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+													<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+												</button>
+											</div>
+											<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
+												<p id="demo"></p>
+											</div>
+
+											<div
+												class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
+												<!-- Button -->
+												<button
+													class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"
+													disabled>Add to Cart</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<label>Nome do produto :</label><input id="np" type="text"> <label>Descrição
+						do produto :</label><input id="dp" type="text">
+								<form action="success.php" method="post">
+										<input type="date" name="expdatef" id="expdatef" value="" hidden> 
+										<input type="text" id="namef" name="namef" hidden> 
+										<input type="text" id="descf" name="descf" hidden> 
+										<input type="text" id="prcf" name="prcf" hidden> 
+										<input type="text" id="prcf2" name="prcf2" hidden> 
+										<input id="imagef1" name="imagef1" type="text" value="" hidden> 
+										<input id="imagef2" name="imagef2" type="text" value="" hidden>
+										<input id="category" name="id_cat" type="number" value=<?= $id_category ?> hidden>
+										<input id="category" name="id" type="number" value=<?= $_SESSION['id'] ?> hidden>
+										<button type="submit" class="btn btn-large btn-block col-sm-12 btn-success" >Startar Campanha</button>
+										
+								</form>
+
+
+							</div>
+						</div>
+					</div>
+
+					<button type="button"
+						class="btn btn-large btn-block col-sm-3 btn-success"
+						name="addToTheBag" id="addToTheBagx">Voltar</button>
+
+
+
+				</div>
+
+
+			</div>
+
+
+
+
+		</section>
+		
+		
+		
+
+		<script>
+		
+		
+				var dataInicio = document.getElementById("dataInicio");
+				var dataFinal = document.getElementById("dataFinal");
+				var dataFinal1 = document.getElementById("dataFinal1");
+				var dataFinal2 = document.getElementById("dataFinal2");
+				var dataFinal3 = document.getElementById("dataFinal3");
+				var dataf =document.getElementById("expdatef");
+
+				dataInicio.addEventListener("focusout", function (event) {
+				  var offset = new Date().getTimezoneOffset();
+				  var data = new Date(dataInicio.value);
+				  var data2 = new Date(dataInicio.value);
+				  var data3 = new Date(dataInicio.value);
+				  data.setMinutes(data.getMinutes() + offset);  
+				  data2.setMinutes(data.getMinutes() + offset); 
+				  data3.setMinutes(data.getMinutes() + offset); 
+				  data.setDate(data.getDate() + 8);
+				  data2.setDate(data2.getDate() + 15);
+				  data3.setDate(data3.getDate() + 22);
+					
+				  dataFinal.value = data.toISOString().substring(0, 10);
+				  dataFinal1.value = data2.toISOString().substring(0, 10);
+				  dataFinal2.value = data3.toISOString().substring(0, 10);
+				  
+				
+				$(document).ready(function(){
+					
+ 					 $('#d7').on('click', function(){
+
+ 						return countDownDate = new Date(dataFinal.value).getTime();
+ 						
+ 	 					 })
+ 	 				 $('#d14').on('click', function(){
+	
+ 						 return countDownDate = new Date(dataFinal1.value).getTime();
+ 						
+ 	 					 })
+ 	 				 $('#d21').on('click', function(){
+ 	 					 return countDownDate = new Date(dataFinal2.value).getTime();
+ 	 					 
+ 	 					 })		
+					// Set the date we're counting down to
+					
+				
+						
+	                var countDownDate;
+
+ 					
+	                // Update the count down every 1 second
+	                var x = setInterval(function() {
+	                
+	                    // Get todays date and time
+	                    var now = new Date().getTime();
+	                    
+	                    // Find the distance between now an the count down date
+	                    var distance = countDownDate - now;
+	                    
+	                    // Time calculations for days, hours, minutes and seconds
+	                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	                    if (days <= 7){
+	 	 	              	dataf.value = data.toISOString().substring(0, 10);
+	 	 	              	
+	 						}else if ( days <= 14){
+	 							dataf.value = data2.toISOString().substring(0, 10);
+	 							
+	 						}else if (days <= 21){
+	 							dataf.value = data3.toISOString().substring(0, 10);
+	 							
+	 						}else{
+	 							dataf.value = data.toISOString().substring(0, 10);
+	 							
+	 						}
+	                    
+	                    // Output the result in an element with id="demo"
+	                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	                    + minutes + "m " + seconds + "s ";
+	                    
+	                    // If the count down is over, write some text 
+	                    if (distance < 0) {
+	                        clearInterval(x);
+	                        document.getElementById("demo").innerHTML = "EXPIRED";
+	                    }
+	                }, 1000);
+				})
+                })
+				
+
+				var event = new Event("focusout");
+				dataInicio.dispatchEvent(event);
+					
+						$(document).ready(function(){
+							$("#Prc").on('change', function(){
+								if ($("#Prc").val()<45){
+									$(this).val(45);
+								}
+								var valuez = $(this).val();
+								var valuez = parseFloat(valuez);
+								
+								//x = valor fixo ou de custo
+								var x = 45.00;
+								
+								var sum = parseFloat(valuez) - x;
+								$('#prcf').val(sum);
+								$('#prcf2').val(valuez);
+								$("#val").text("R$" + sum);
+								var value = sum;
+								var c = parseFloat(value).toFixed(2);
+								$("#val").text("R$" + c);
+								var d =	parseFloat((value*0.03)+value).toFixed(2);
+								var e = parseFloat((value*0.06)+value).toFixed(2);
+								var f = parseFloat((value*0.09)+value).toFixed(2);
+								var g = parseFloat((value*0.12)+value).toFixed(2);
+								var h = parseFloat((value*0.15)+value).toFixed(2);
+								var i = parseFloat((value*0.18)+value).toFixed(2);
+								var j = parseFloat((value*0.21)+value).toFixed(2);
+								var k = parseFloat((value*0.24)+value).toFixed(2);
+								var l = parseFloat((value*0.27)+value).toFixed(2);
+								var m = parseFloat((value*0.30)+value).toFixed(2);
+								var c1 = FormatMoney(parseFloat(c*50).toFixed(2),'','','.',',',0,2);
+								var d1 = FormatMoney(parseFloat(d*100).toFixed(2),'','','.',',',0,2);
+								var e1 = FormatMoney(parseFloat(e*150).toFixed(2),'','','.',',',0,2);
+								var f1 = FormatMoney(parseFloat(f*200).toFixed(2),'','','.',',',0,2);
+								var g1 = FormatMoney(parseFloat(g*250).toFixed(2),'','','.',',',0,2);
+								var h1 = FormatMoney(parseFloat(h*300).toFixed(2),'','','.',',',0,2);
+								var i1 = FormatMoney(parseFloat(i*350).toFixed(2),'','','.',',',0,2);
+								var j1 = FormatMoney(parseFloat(j*400).toFixed(2),'','','.',',',0,2);
+								var k1 = FormatMoney(parseFloat(k*450).toFixed(2),'','','.',',',0,2);
+								var l1 = FormatMoney(parseFloat(l*500).toFixed(2),'','','.',',',0,2);
+								var m1 = FormatMoney(parseFloat(m*502).toFixed(2),'','','.',',',0,2);
+								$("#c").text("R$" + c);
+								$("#d").text("R$" + d);
+								$("#e").text("R$" + e);
+								$("#f").text("R$" + f);
+								$("#g").text("R$" + g);
+								$("#h").text("R$" + h);
+								$("#i").text("R$" + i);
+								$("#j").text("R$" + j);
+								$("#k").text("R$" + k);
+								$("#l").text("R$" + l);
+								$("#m").text("R$" + m);
+								//area dos totais
+								$("#c2").text("R$" + c1);
+								$("#d2").text("R$" + d1);
+								$("#e2").text("R$" + e1);
+								$("#f2").text("R$" + f1);
+								$("#g2").text("R$" + g1);
+								$("#h2").text("R$" + h1);
+								$("#i2").text("R$" + i1);
+								$("#j2").text("R$" + j1);
+								$("#k2").text("R$" + k1);
+								$("#l2").text("R$" + l1);
+								$("#m2").text("Infinito e alem");
+								$("#prc").text("R$" + $('#Prc').val());
+								
+							})
+						})
+						
+						$(document).ready(function(){
+							$('#vrau').hide();
+							$('#vrau2').hide();
+							$('#alerta').hide();
+							$("#addToTheBag").click(function(){
+								 html2canvas($('#shirtDiv').get(0)).then( function (canvas) {
+									var data =canvas.toDataURL();
+									
+// 										console.log(data);
+										var test = $("#imagem").attr('src', data);
+										$("#xd").attr('src',data);
+										
+// 										$("#xd2").attr('data-thumb',data);
+// 										$("#image1").val(data2);
+// 										console.log(test)
+										var canvas = document.getElementById('tcanvas');
+										var data2 = canvas.toDataURL();
+										$("#image1").val(data2);
+										$("#image2").val(data);
+										$('#imagef1').val(data2);
+										$('#imagef2').val(data);
+										
+										console.log($("#image1").val());
+// 										console.log(data2);
+									});
+									$('#typography').hide(500);
+	 								$('#vrau').show(500);
+								})
+							$('#addToTheBag2').click(function(){
+								if ($('#Prc').val() != "" && $('#dataf').val() != "" ){
+								$('#vrau').hide(500);
+								$('#vrau2').show(500);
+							}else{
+    							$('[data-toggle="popover"]').popover();   
+							}
+								
+
+								})
+							$('#addToTheBag3').click(function(){
+									$('#vrau').hide(500);
+									$('#vrau2').hide(500);
+									$('#typography').show(500);
+
+									})
+									$('#addToTheBagx').click(function(){
+									$('#vrau').show(500);
+									$('#vrau2').hide(500);
+									$('#typography').hide(500);
+
+									})
+									
+
+								
+							})
+							
+						$(document).ready(function() {
+							$('#np').on('change',function(){
+								var nome = $('#np').val();
+								$('#n').text(nome);
+								$('#namef').val(nome);
+							})
+							$('#dp').on('change', function(){
+								var desc = $('#dp').val();
+								$('#desc').text(desc);
+								$('#descf').val(desc);
+							})
+							
+
+							
+						})
+						</script>
+
+	</div>
+	</div>
+
+	</div>
+
+	</div>
+	
+	</div>
+	<!-- /container -->
+
+	<!-- Footer ================================================== -->
+
+	
+	</div>
+	<footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a href="#">Sobre</a>
+                        </li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item">
+                            <a href="#">Contato</a>
+                        </li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item">
+                            <a href="#">Termos de Uso</a>
+                        </li>
+
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">© Adapt Space 2018. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3">
+                            <span style="font-size: 1.7em; color: white;">
+                        <i class="fab fa-facebook-square "></i>
+                        </span>
+                        </li>
+                        <li class="list-inline-item mr-3">
+
+                            <span style="font-size: 1.7em; color: white;">
+                        <i class="fab fa-twitter-square "></i>
+                        </span>
+                        </li>
+                        <li class="list-inline-item">
+                            <span style="font-size: 1.7em; color: white;">
+                        <i class="fab fa-instagram "></i>
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/bootstrap/js.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+  /* var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35639689-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ */
+ 
+ 
+</script>
+<?php }?></body>
+</html>
