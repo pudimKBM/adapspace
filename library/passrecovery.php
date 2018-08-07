@@ -1,28 +1,40 @@
 <?php
-      include 'comfig_mail.php';
+      use PHPMailer\PHPMailer\PHPMailer;
 
-    $mail->addAddress("{$email}", "{$firstname}");
-    $mail->addBCC("adm@adaptspace.com.br", "AdaptSpace");
+      require "vendor/autoload.php";
+      $mail = new PHPMailer();
+      $mail->isSMTP();
+      $mail->Host = "mx1.hostinger.com.br";
+      $mail->Port  = 587;
+      $mail->SMTPSecure= 'tls';
+      $mail->SMTPAuth = true;
+      $mail->Username = "adm@adaptspace.com.br";
+      $mail->Password ="J3@ta@ti27";
+      
+      
+      $mail->setFrom('adm@adaptspace.com.br','AdaptSpace'); 
+
+    $mail->addAddress("$email", "antoniovinicius");
+    //$mail->addBCC("adm@adaptspace.com.br", "AdaptSpace");
     $mail->Subject = 'Recuperaçao de senha AdaptSpace';
     $mail->msgHTML("
     <html>
     <head>
     <title>Opa esqueceu sua senha</title>
-    <h4> Aqui esta sua senha de volta {$firstname} {$lastname} </h4>
+    <h4> Ve se nao esquece dessa vez hein XD </h4>
     </head>
     <body>
-    <p>usuario : {$email} </p>
-    <p>e-mail: {$email} </p>
+    <p> Meeeeeu gamigo </p>
+    <a href='https://www.adaptspace.com.br/recover.php?email=$email' > Clique aqui para recupera o email</a>
+    <p> </p>
     </body>
     </html>");
-    $mail->AltBody= "Bem vindo {$firstname} {$lastname}" ;
+    $mail->AltBody= "Seu link para recuperaçao de senha  https://www.adaptspace.com.br/recover.php?email=$email" ;
     
-   //if (!$mail->send()){
-   //    echo "erro" . $mail->ErrorInfo();
-
-   //}else{
-   //    echo "message sent";
-
-   //}
+  //if (!$mail->send()){
+  //    echo "erro" . $mail->ErrorInfo();
+  //}else{
+  //    echo "message sent";
+  //}
 
 ?>

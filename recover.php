@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+include 'db.php';
+$email = $_GET['email'];
+$valid = "SELECT * FROM `users` WHERE `email`= '$email'";
+$queryval = $connection->query($valid);
+if($queryval->num_rows > 0){
+    while ($rows = $queryval->fetch_assoc()) {
+        $datef = $rows['rec_date'];
+   }
+}
+
+?>
 
 <head>
 <!-- Required meta tags-->
@@ -56,17 +71,35 @@
 							</a>
 						</div>
 						<div class="login-form">
+						<?php 
+						date_default_timezone_set('America/Sao_Paulo');
+						$datax = date('d-m-Y');
+						//echo   date('d-m-Y')  ;
+					if($datef > $datax ){
+
+?>
+						
 							<form  method="post">
 								<div class="form-group">
-									<label>Email</label> <input
-										class="au-input au-input--full" type="email" name="email"
-										placeholder="Email">
+									<label>Insira sua nova senha</label> <input
+										class="au-input au-input--full" type="password" name="senha"
+										placeholder="Nova senha">
 								</div>
-								<?php include 'includes/recovery.php' ?>
+								<?php include 'includes/fecoverscript.php' ?>
 								<button class="au-btn au-btn--block au-btn--green m-b-20"
-									type="submit" name="submit" value="submit" >Enviar</button>
-									
+									type="submit">Enviar</button>
 							</form>
+							<?php
+					}else if($datax > $datef) {?>
+					<h1> Link expirado</h1>
+					<?php
+} 
+if (!isset($_GET['email'])){
+	?>
+	<h1> Que tu ta fazendo ak mano ?</h1>
+	<?php
+}
+?>
 						</div>
 					</div>
 				</div>
@@ -74,6 +107,7 @@
 		</div>
 
 	</div>
+
 
 	<!-- Jquery JS-->
 	<script src="vendor/jquery-3.2.1.min.js"></script>
