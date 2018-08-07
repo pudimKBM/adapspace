@@ -161,6 +161,9 @@ error_reporting(0);
 								<p>
 									Ja tem uma conta? <a href="login.php">Faça se login</a>
 								</p>
+								<p>
+								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>
+							</p>
 							</div>
 						</div>
 					</div>

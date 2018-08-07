@@ -11,7 +11,7 @@
 <meta name="keywords" content="au theme template">
 
 <!-- Title Page-->
-<title>Forget Password</title>
+<title>Esqueceu sua senha?</title>
 
 <!-- Fontfaces CSS-->
 <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -45,7 +45,7 @@
 
 </head>
 
-<body class="animsition">
+<body class="">
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
@@ -58,12 +58,12 @@
 						<div class="login-form">
 							<form action="" method="post">
 								<div class="form-group">
-									<label>Email Address</label> <input
+									<label>Email</label> <input
 										class="au-input au-input--full" type="email" name="email"
 										placeholder="Email">
 								</div>
 								<button class="au-btn au-btn--block au-btn--green m-b-20"
-									type="submit">submit</button>
+									type="submit">Enviar</button>
 							</form>
 						</div>
 					</div>

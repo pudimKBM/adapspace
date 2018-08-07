@@ -146,6 +146,9 @@ error_reporting(0);
 							<p>
 								Nao tem conta ainda? <a href="register.php">Cadastre-se aqui</a>
 							</p>
+							<p>
+								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>
+							</p>
 						</div>
 					</div>
 				</div>
