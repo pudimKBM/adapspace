@@ -10,5 +10,5 @@ $email = $_GET['email'];
 
 $query = "UPDATE `users` SET `password`= '$senha' WHERE `email` = '$email' ";
  $connection->query($query);
-
+header('location: index.php');
 ?>
