@@ -302,9 +302,7 @@ var line4;
 			        {}
 			    }		
 			   	canvas.renderAll();
-			   	setTimeout(function() {
-			   		canvas.calcOffset();
-			    },200);			   	
+			   
         });	   
 	   $(".clearfix button,a").tooltip();
 	   line1 = new fabric.Line([0,0,200,0], {"stroke":"#000000", "strokeWidth":1,hasBorders:false,hasControls:false,hasRotatingPoint:false,selectable:false});

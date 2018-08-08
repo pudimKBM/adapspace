@@ -465,17 +465,25 @@ if (! isset($_SESSION['logged_in'])) {
 									<div class="">
 										<a class="cor">Você pode selecionar vários produtos em cores diferentes.
 											Clique no produto e veja a mágica acontecer:</a>
+											<select id="tshirttype">                        
+				                    <option value="img/crew_front1.png" selected="selected">Camiseta Maculina</option>
+				                    <option value="img/mens_longsleeve_front.png">Moletom</option>                                        
+				                    <option value="img/mens_hoodie_front.png">Moletom com capuz</option>                    
+				                    <option value="img/t-shirt_feminina.png">Camiseta Feminina</option>
+									<option value="img/babylook.png">Baby look</option>
+								</select>	
 										<!--					      	<h3>Tee Styles</h3>-->
 										<p style="padding-top: 10px;">
+										
 
-											<img value="1" selected="selected" src="img/crew_front1.png"
+											<img  id="camiseta1" src="img/crew_front1.png"
 												style="width: 100px" />
-											<!--<img value="1" selected="selected" src="img/mens_hoodie_front.png"
+											<img  id="camiseta2" src="img/mens_hoodie_front.png"
 												style="width: 100px" />
-											<img value="1" selected="selected" src="img/mens_longsleeve_front.png"
+											<img  id="camiseta3" src="img/mens_longsleeve_front.png"
 												style="width: 100px" />
-											<img value="1" selected="selected" src="img/womens_crew_back.png"
-												style="width: 100px" /> -->
+											<img  id="camiseta4" src="img/t-shirt_feminina.png"
+												style="width: 100px" /> 
 
 
 										</p>
@@ -606,7 +614,7 @@ if (! isset($_SESSION['logged_in'])) {
 							  <div class="btn-group">										      
 							      <button class="btn" id="bring-to-front" data-original-title="Trazer para frente"><i class="icon-fast-backward rotate" style="height:19px;" deluminate_imagetype="png"></i></button>
 							      <button class="btn" id="send-to-back" data-original-title="Mandar para tras"><i class="icon-fast-forward rotate" style="height:19px;" deluminate_imagetype="png"></i></button>
-							      <button id="flip" type="button" class="btn" data-original-title="Mostrar costas"><i class="icon-retweet" style="height:19px;" deluminate_imagetype="png"></i></button>
+								  <button id="flipback" type="button" class="btn" title="Rotate View"><i class="icon-retweet" style="height:19px;"></i></button>
 							      <button id="remove-selected" class="btn" data-original-title="Deletar item selecionado"><i class="icon-trash" style="height:19px;" deluminate_imagetype="png"></i></button>
 							  </div>
 							</div>			  
@@ -637,7 +645,7 @@ if (! isset($_SESSION['logged_in'])) {
 
 								<div id="shirtDiv" class="page "
 									style="width: 530px; height: 630px; position: relative; background-color: rgb(255, 255, 255);">
-									<img id="tshirtFacing" src="img/crew_front1.png"></img>
+									<img id="tshirtFacing" src="img/crew_front1.png" style="width: 530px; height: 630px;"></img>
 									<div id="drawingArea"
 										style="position: absolute; top: 100px; left: 160px; z-index: 10; width: 200px; height: 400px;">
 										<canvas id="tcanvas" width=200 height="400" class="hover"
@@ -868,7 +876,7 @@ if (! isset($_SESSION['logged_in'])) {
 												</button>
 
 												<input class="size8 m-text18 t-center num-product"
-													type="number" name="num-product" value="1">
+													type="number" name="num-product" >
 
 												<button
 													class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
@@ -930,7 +938,219 @@ if (! isset($_SESSION['logged_in'])) {
 		
 
 		<script>
+		var valueSelect = $("#tshirttype").val();
+        $("#tshirttype").change(function(){
+			valueSelect = $(this).val();
+			$("#tshirtFacing").attr("src",$(this).val());
+        });
+        $('#flipback').click(
+		   function() {	
+               if (valueSelect === "img/crew_front1.png") {
+                   if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/crew_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/crew_front1.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }		
+               }
+               
+               else if (valueSelect === "img/mens_longsleeve_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_longsleeve_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_longsleeve_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+               else if (valueSelect === "img/mens_tank_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_tank_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_tank_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+               else if (valueSelect === "img/mens_hoodie_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_hoodie_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_hoodie_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+			   }
+			   else if (valueSelect === "img/babylook.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/babylook.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/costas-babylook.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+			   }
+			   else if (valueSelect === "img/t-shirt_feminina.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/t-shirt_feminina.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+						
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/costas-feminina.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+			   /*	if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/crew_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/crew_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }		*/
+			   	canvas.renderAll();
+			   		
+        });	
+	
+	
 		
+			
+	
+		
+		
+		   
 		
 				var dataInicio = document.getElementById("dataInicio");
 				var dataFinal = document.getElementById("dataFinal");
