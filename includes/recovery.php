@@ -12,19 +12,23 @@ error_reporting(E_ALL);
          $email = $queryf['email'];
          $firstname = $queryf['firstname'];
          $lastname = $queryf['lastname'];
+         $rec_valid = $queryf['rec_valid'];
         
 
      }
+     if($rec_valid == 0){
         include 'library/passrecovery.php';
     date_default_timezone_set('America/Sao_Paulo');
     $date = date('d-m-Y');;
     $datefin= date('d-m-Y', strtotime($date. ' + 2 days'));
-    $query_date = "UPDATE `users` SET `rec_date`= '$datefin' WHERE `email` = '$email' ";
+    $query_date = "UPDATE `users` SET `rec_date`= '$datefin',`rec_valid` = 1  WHERE `email` = '$email' ";
     $queryrecfst = $connection->query($query_date);
     echo "email enviado";
-    }else {
-        echo "<h1> insira um email valido </h1>";
     }
+
+}else {
+    echo "<h1> insira um email valido </h1>";
+}
 }
 
 ?>
