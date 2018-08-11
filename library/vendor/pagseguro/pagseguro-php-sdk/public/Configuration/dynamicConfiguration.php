@@ -22,7 +22,7 @@
  *
  */
 
-require_once "../../vendor/autoload.php";
+
 
 \PagSeguro\Library::initialize();
 \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
@@ -36,11 +36,11 @@ require_once "../../vendor/autoload.php";
 //For example, to configure the library dynamically:
 \PagSeguro\Configuration\Configure::setEnvironment('production');//production or sandbox
 \PagSeguro\Configuration\Configure::setAccountCredentials(
-    'adm@adaptspace.com.br ',
+    'adm@adaptspace.com.br',
     'E105F5A60F4B4B23B388570BF17DCC26'
 );
 \PagSeguro\Configuration\Configure::setCharset('UTF-8');// UTF-8 or ISO-8859-1
-\PagSeguro\Configuration\Configure::setLog(true, 'Configuration/log.log');
+\PagSeguro\Configuration\Configure::setLog(true, '../Configuration/log.log');
 
 /**
  * @todo To set the application credentials instead of the account credentials use:

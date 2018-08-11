@@ -9,7 +9,7 @@ require_once("PagSeguro.class.php");
 $PagSeguro = new PagSeguro();
 $queryusers = "SELECT*
 FROM product, command
-WHERE statut='ordered' AND id_user = '{$_SESSION['id']}' GROUP BY command.id";
+WHERE statut='ordered' AND id_user = 8 GROUP BY command.id";
     $resultusers = $connection->query($queryusers);
     
     if ($resultusers->num_rows > 0) {
@@ -24,7 +24,7 @@ WHERE statut='ordered' AND id_user = '{$_SESSION['id']}' GROUP BY command.id";
 }
 //EFETUAR PAGAMENTO	
 $venda = array("codigo"=>"E105F5A60F4B4B23B388570BF17DCC26",
-			   "valor"=>100.00,
+			   "valor"=>0.01,
 			   "descricao"=>"VENDA DE NONONONONONO",
 			   "nome"=>"",
 			   "email"=>"",
