@@ -2,38 +2,49 @@
 <html lang="pt-br">
 
 <?php include 'header.php' ?>
+<style>
+    .img2{
+  vertical-align: middle;
+  border-style: none; 
+  width : 100%;
+}
+.btn-outline-info{
+    color: #fff;
+    background-color: #0000007a;
+    border-color: #fff;
 
-    <div id="mama" class="carousel slide" data-ride="carousel">
+    font-weight: bold ;
+
+}
+.btn-outline-info:hover {
+    color: #17a2b8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #17a2b8;
+}
+    </style>
+    <div id="mama" class="carousel slide" data-ride="carousel" style="
+    padding-top: 100px;">
+
 
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
+           
         </ul>
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="IMG/img-2.png" alt="Ricky-boring">
+                <img class="img2" src="IMG/banner-luiz.png" alt="Ricky-boring">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    <h1 class="pb-5">Simply dummy text</h1>
-                    <p class="lead pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                    <button type="button" class="btn btn-outline-primary">Comece por aqui.</button>
+                    
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="IMG/img-1.png" alt="escreve aqui antonio">
+                <img class="img2" src="IMG/Banner.jpg" alt="escreve aqui antonio">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    <h1 class="pb-5">Simply dummy text</h1>
-                    <p class="lead pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                    <button type="button" class="btn btn-outline-primary">Comece por aqui.</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="IMG/img-3.png" alt="escreve aqui antonio">
-                <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    <h1 class="pb-5">Simply dummy text</h1>
-                    <p class="lead pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                    <button type="button" class="btn btn-outline-primary">Comece por aqui.</button>
+                    
+                    <button type="button" class="btn btn-outline-info">Comece por aqui.</button>
                 </div>
             </div>
         </div>
@@ -50,7 +61,7 @@
 
     <section id="team">
         <div class="container">
-            <h2 class="text-center "><span class="font-in">Nossos Melhores Influencers</span></h2>
+            <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -59,12 +70,12 @@
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <img class="card-img-top img-card" src="IMG/card-img1.png">
+                                        <img class="card-img-top img-card" src="IMG/luiz.jpg">
                                         <div class="card-body">
-                                            <h4 class="card-title font-in">Leo Picon</h4>
-                                            <h5 class="card-subtitle mb-2 font-in">Influencer / Youtuber</h5>
-                                            <h5 class="card-subtitle mb-2 font-in">500.789 Seguidores</h6>
-                                                <span style="font-size: 1.7em; color: black;">
+                                            <h4 class="card-title font-in">Luiz Moreno</h4>
+                                            <h5 class="card-subtitle mb-2 font-in">Ator / Youtuber</h5>
+                                            <h5 class="card-subtitle mb-2 font-in">1.000.000 Seguidores</h6>
+                                                <span style="font-size: 1.7em; color: #11998e;">
                        <i class="fas fa-chevron-down"></i>
                         </span>
                                         </div>
@@ -76,13 +87,13 @@
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title font-in">Sunlimetech</h4>
                                         <p class="card-text font-in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-facebook-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-twitter-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-instagram "></i>
                         </span>
 
@@ -104,7 +115,7 @@
                                             <h4 class="card-title font-in">Yoda Junior</h4>
                                             <h5 class="card-subtitle mb-2 font-in">Pro Player / Youtuber</h5>
                                             <h5 class="card-subtitle mb-2 font-in">100.789 Seguidores</h6>
-                                                <span style="font-size: 1.7em; color: black;">
+                                                <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fas fa-angle-double-right"></i>
                         </span>
                                         </div>
@@ -116,13 +127,13 @@
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title font-in">Sunlimetech</h4>
                                         <p class="card-text font-in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-facebook-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-twitter-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-instagram "></i>
                         </span>
 
@@ -144,7 +155,7 @@
                                             <h4 class="card-title font-in">Felipe "Brtt"</h4>
                                             <h5 class="card-subtitle mb-2 font-in">Pro-Player / Youtuber</h5>
                                             <h5 class="card-subtitle mb-2 font-in">120.754. Seguidores</h6>
-                                                <span style="font-size: 1.7em; color: black;">
+                                                <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fas fa-angle-double-right"></i>
                         </span>
                                         </div>
@@ -156,13 +167,13 @@
                                     <div class="card-body text-center mt-4">
                                         <h4 class="card-title font-in">Sunlimetech</h4>
                                         <p class="card-text font-in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-facebook-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-twitter-square "></i>
                         </span>
-                                        <span style="font-size: 1.7em; color: black;">
+                                        <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-instagram "></i>
                         </span>
 
@@ -204,13 +215,6 @@
                     </div>
                 </div>
                 <!-- Single Catagory -->
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-4.png);">
-                        <div class="catagory-content">
-                            <a href="#" class="btn btn-outline-info">ACESSORIOS</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
