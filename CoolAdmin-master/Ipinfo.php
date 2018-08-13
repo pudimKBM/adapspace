@@ -4,8 +4,8 @@ try{
 
 
     session_start();
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);  
+  
+    
 $pnome       = $_POST['nome1'];
 $pnome2      = $_POST['nome2'];
 $pdtnasc     = $_POST['data'];

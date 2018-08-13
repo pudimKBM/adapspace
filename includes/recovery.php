@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['submit'])){
 include 'db.php'; 
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
+  
+  
 error_reporting(E_ALL);
     $email =  $_POST['email'];
     $queryrec = "SELECT * FROM `users` WHERE `email`= '$email'";

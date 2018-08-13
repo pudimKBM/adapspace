@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
+  
+  
 header("access-control-allow-origin: https://pagseguro.uol.com.br");
 header("Content-Type: text/html; charset=UTF-8",true);
 date_default_timezone_set('America/Sao_Paulo');

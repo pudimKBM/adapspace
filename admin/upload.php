@@ -1,13 +1,13 @@
 
 <?php
 session_start();
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-// Conexão com o banco de dados
-$conn = @mysql_connect("localhost", "root", "root") or die ("Problemas na conexão.");
-$db = @mysql_select_db("dbadapt", $conn) or die ("Problemas na conexão");
+  
+  
+// Conexï¿½o com o banco de dados
+$conn = @mysql_connect("localhost", "root", "root") or die ("Problemas na conexï¿½o.");
+$db = @mysql_select_db("dbadapt", $conn) or die ("Problemas na conexï¿½o");
  
-// Se o usuário clicou no botão cadastrar efetua as ações
+// Se o usuï¿½rio clicou no botï¿½o cadastrar efetua as aï¿½ï¿½es
 if (isset($_POST['cadastrar'])) {
 	
 	// Recupera os dados dos campos
@@ -17,48 +17,48 @@ if (isset($_POST['cadastrar'])) {
 	// Se a foto estiver sido selecionada
 	if (!empty($foto["name"])) {
 		
-		// Largura máxima em pixels
+		// Largura mï¿½xima em pixels
 		$largura = 5000;
-		// Altura máxima em pixels
+		// Altura mï¿½xima em pixels
 		$altura = 5000;
-		// Tamanho máximo do arquivo em bytes
+		// Tamanho mï¿½ximo do arquivo em bytes
 		$tamanho = 2000000;
  
 		$error = array();
  
-    	// Verifica se o arquivo é uma imagem
+    	// Verifica se o arquivo ï¿½ uma imagem
     	if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
-     	   $error[1] = "Isso não é uma imagem.";
+     	   $error[1] = "Isso nï¿½o ï¿½ uma imagem.";
    	 	} 
 	
-		// Pega as dimensões da imagem
+		// Pega as dimensï¿½es da imagem
 		$dimensoes = getimagesize($foto["tmp_name"]);
 	
-		// Verifica se a largura da imagem é maior que a largura permitida
+		// Verifica se a largura da imagem ï¿½ maior que a largura permitida
 		if($dimensoes[0] > $largura) {
-			$error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
+			$error[2] = "A largura da imagem nï¿½o deve ultrapassar ".$largura." pixels";
 		}
  
-		// Verifica se a altura da imagem é maior que a altura permitida
+		// Verifica se a altura da imagem ï¿½ maior que a altura permitida
 		if($dimensoes[1] > $altura) {
-			$error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
+			$error[3] = "Altura da imagem nï¿½o deve ultrapassar ".$altura." pixels";
 		}
 		
-		// Verifica se o tamanho da imagem é maior que o tamanho permitido
+		// Verifica se o tamanho da imagem ï¿½ maior que o tamanho permitido
 		if($foto["size"] > $tamanho) {
-   		 	$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+   		 	$error[4] = "A imagem deve ter no mï¿½ximo ".$tamanho." bytes";
 		}
  
-		// Se não houver nenhum erro
+		// Se nï¿½o houver nenhum erro
 		if (count($error) == 0) {
 		
-			// Pega extensão da imagem
+			// Pega extensï¿½o da imagem
 			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
  
-        	// Gera um nome único para a imagem
+        	// Gera um nome ï¿½nico para a imagem
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
  
-        	// Caminho de onde ficará a imagem
+        	// Caminho de onde ficarï¿½ a imagem
         	$caminho_imagem = "img/" . $nome_imagem;
  
 			// Faz o upload da imagem para seu respectivo caminho
@@ -69,7 +69,7 @@ if (isset($_POST['cadastrar'])) {
 		
 			// Se os dados forem inseridos com sucesso
 			if ($sql){
-				echo "Você foi cadastrado com sucesso.";
+				echo "Vocï¿½ foi cadastrado com sucesso.";
 			}
 		}else {
 		    echo "<h1>erro</h1>";

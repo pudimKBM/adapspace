@@ -51,8 +51,8 @@ if (! isset($_SESSION['logged_in']) or ! isset($_SESSION['id'])) {
 else {
     $idsess = $_SESSION['id'];
 }
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
+  
+  
 ?>
 	<?php include 'header.php';?>
 
