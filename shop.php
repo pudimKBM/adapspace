@@ -56,20 +56,17 @@ if ($_SESSION['logged_in']) {
 	<?php include 'header.php';?>
 
 	<!-- Slide1 -->
-	<section class="slide1">
+	<section class="slide1"  style="margin-top:60px;">
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1 item1-slick1"
 					style="background-image: url(IMG/ricky-boring.jpg);">
-					<div
-						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
-						<div class="wrap-btn-slide1 w-size1 animated visible-false"
-							data-appear="zoomIn">
+						<div class="wrap-btn-slide1 w-size1 animated visible-false zoomIn visible-true" data-appear="zoomIn">
 							<!-- Button -->
-							<a href="product.html"
-								class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now </a>
+							<a style="margin-top:400px;background-color:#49eabe;" href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" tabindex="0">
+								COMPRAR </a>
 						</div>
 					</div>
 				</div>

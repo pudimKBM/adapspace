@@ -20,7 +20,7 @@ session_start();
 <body>
 
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand h1" href="index.php">logo</a>
+    <a  href="index.php"><img style="width:130px;" src="images/logo-adaptspace.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
             <span class="navbar-toggler-icon"></span>
         </button>

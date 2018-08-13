@@ -60,7 +60,7 @@ try {
         \PagSeguro\Configuration\Configure::getAccountCredentials()
     );
 
-    echo "<strong>ID de sess&atilde;o criado: </strong>{$sessionCode->getResult()}";
+   // echo "<strong>ID de sess&atilde;o criado: </strong>{$sessionCode->getResult()}";
 } catch (Exception $e) {
     die($e->getMessage());
 }

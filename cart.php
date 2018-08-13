@@ -42,7 +42,7 @@
 </head>
 <body class="">
 <?php
-
+include 'db.php';
 session_start();
 
 if (! isset($_SESSION['logged_in']) or ! isset($_SESSION['id'])) {
@@ -51,6 +51,8 @@ if (! isset($_SESSION['logged_in']) or ! isset($_SESSION['id'])) {
 else {
     $idsess = $_SESSION['id'];
 }
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
 ?>
 	<?php include 'header.php';?>
 
@@ -74,7 +76,7 @@ else {
 										<strong class="st">Checkout</strong>
                                     </div>
                                     <div class="row"> 
-                                    <form action="pagseguro/checkout.php" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                                    <form action="library/vendor/pagseguro/pagseguro-php-sdk/public/Checkout/createPaymentRequestLightbox.php" method="post" onsubmit="PagSeguroLightbox(this); return false;">
 									        <div class="card-body card-block">
                                             
 									        	<div class="form-group">
@@ -160,12 +162,12 @@ else {
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="CPF" class=" form-control-label"> Telefone </label> <input type="tel" id="celular" placeholder="55555555555" class="form-control"  rquired>
+                                                            <label for="CPF" class=" form-control-label"> Telefone </label> <input type="tel" name ="tel1" id="celular" placeholder="55555555555" class="form-control"  rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="tel" class=" form-control-label"> Celular </label> <input type="tel" id="celular" placeholder="(11)xxxx-xxxx" class="form-control" rquired>
+                                                            <label for="tel" class=" form-control-label"> Celular </label> <input type="tel" id="celular" name= "tel2" placeholder="(11)xxxx-xxxx" class="form-control" rquired>
                                                         </div>
                                                     </div>
                                                 </div>        
@@ -174,18 +176,62 @@ else {
 						<input calss="col-md-6" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/120x53-comprar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             
                                 </form>
-								<!-- Declaração do formulário -->  
+                                </div>
+                                </div><?php
+								$totalQ =  ("SELECT sum(product.price) as total FROM product, command 
+WHERE command.id_produit = product.id AND command.statut = 'ordered' AND command.id_user =  $idsess;" );
+$resultTotal = $connection->query($totalQ);
+if ($resultTotal->num_rows >0 ){
+	while($rowq = $resultTotal->fetch_assoc()){
+		$total = $rowq['total'];
+	}
+}
 
-								<?php
-			ini_set('display_errors',1);
-			ini_set('display_startup_erros',1);
-			 ?>
-<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->	
-                                </div>
-                                </div>
+?>
+								<div
+				class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
+				<h5 class="m-text20 p-b-24">Total</h5>
+
+				<!--  -->
+				<div class="flex-w flex-sb-m p-b-12">
+					<span class="s-text18 w-size19 w-full-sm"> Subtotal: </span> <span
+						class="m-text21 w-size20 w-full-sm" id="XD2"> <?=$total; ?> </span>
+				</div>
+
+				<!--  -->
+				<div class="flex-w flex-sb bo10 p-t-15 p-b-20">
+					<span class="s-text18 w-size19 w-full-sm">  Frete: </span>
+
+					<div class="w-size20 w-full-sm">
+					
+
+						<span class="s-text19"> Calculo de frete </span>
+						<form>
+						<div class="size13 bo4 m-b-22">
+							<input class="sizefull s-text7 p-l-15 p-r-15" id="cep_destino" type="text"
+								name="postcode" placeholder="CEP">
+						</div>
+						
+						<span class="m-text20"  style="allign-content: center;"  > R$ : </span> <span class="m-text20" id="valor_frete" style="allign-content: center;"  >  </span>
+						<div class="size14 trans-0-4 m-b-10">
+							<!-- Button -->
+							<button type="button" onclick="LoadFrete();"
+								class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+								Calcular Frete</button>
+						</div>
+						</form>
+					</div>
+				</div>
+
+				<!--  -->
+				<div class="flex-w flex-sb-m p-t-26 p-b-30">
+					<span class="m-text22 w-size19 w-full-sm"> Total: </span> <span
+						class="m-text21 w-size20 w-full-sm" id='XD'> $39.00 </span>
+				</div>
+
+				
+			</div>
 								</div>
-							
-			
 			<div class="col-md-6">
 			<div class=" container-table-cart pos-relative">
 				<div class="wrap-table-shopping-cart bgwhite">
@@ -200,15 +246,16 @@ else {
 							
 						</tr>
 	<?php
-include 'db.php';
+
 // get products
-$queryproduct = "SELECT product.name as 'name',
+$queryproduct = "SELECT  product.name as 'name',
           product.id as 'id', product.price as 'price',
           product.thumbnail as 'thumb',
           category.name as 'category', command.id_user, command.statut,
           command.quantity as 'quantity',
           command.id as 'id_trans',
           command.Tamanho as 'Tamanho'
+		  
 FROM category, product, command
 WHERE command.id_produit = product.id AND product.id_category = category.id AND command.statut = 'ordered' AND command.id_user =  $idsess;";
 $result1 = $connection->query($queryproduct);
@@ -216,6 +263,7 @@ $result1 = $connection->query($queryproduct);
 if ($result1->num_rows > 0) {
     // output data of each row
     while ($rowproduct = $result1->fetch_assoc()) {
+		
         $thumb = $rowproduct['thumb'];
         $id_productdb = $rowproduct['id_trans'];
         $name_product = $rowproduct['name'];
@@ -261,6 +309,7 @@ if ($result1->num_rows > 0) {
     }
 }
 ?>
+
 					</table>
 				</div>
 			</div>
@@ -294,59 +343,13 @@ if ($result1->num_rows > 0) {
 	
 	?>
 			<!-- Total -->
-			<div
-				class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
-				<h5 class="m-text20 p-b-24">Total</h5>
-
-				<!--  -->
-				<div class="flex-w flex-sb-m p-b-12">
-					<span class="s-text18 w-size19 w-full-sm"> Subtotal: </span> <span
-						class="m-text21 w-size20 w-full-sm"> <?= $price_product*$quantity_product; ?> </span>
-				</div>
-
-				<!--  -->
-				<div class="flex-w flex-sb bo10 p-t-15 p-b-20">
-					<span class="s-text18 w-size19 w-full-sm">  Frete: </span>
-
-					<div class="w-size20 w-full-sm">
-					
-
-						<span class="s-text19"> Calculo de frete </span>
-						<form>
-						<div class="size13 bo4 m-b-22">
-							<input class="sizefull s-text7 p-l-15 p-r-15" id="cep_destino" type="text"
-								name="postcode" placeholder="CEP">
-						</div>
-						
-						<span class="m-text20" id="valor_frete" style="allign-content: center;" > Valor do frete </span>
-						<div class="size14 trans-0-4 m-b-10">
-							<!-- Button -->
-							<button type="button" onclick="LoadFrete();"
-								class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-								Update Totals</button>
-						</div>
-						</form>
-					</div>
-				</div>
-
-				<!--  -->
-				<div class="flex-w flex-sb-m p-t-26 p-b-30">
-					<span class="m-text22 w-size19 w-full-sm"> Total: </span> <span
-						class="m-text21 w-size20 w-full-sm"> $39.00 </span>
-				</div>
-
-				<div class="size15 trans-0-4">
-					<!-- Button -->
-					<a class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" href="checkout2.php"> Fazer Checkout</a>
-				<!--	<button
-						class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-						Proceed to Checkout</button>-->
-				</div>
-			</div>
+			
 			</div>
 		</div>
 		</div>
 	</section>
+	<script>
+		</script>
 
 
 
@@ -388,6 +391,7 @@ if ($result1->num_rows > 0) {
 			minimumResultsForSearch: 20,
 			dropdownParent: $('#dropDownSelect2')
 		});
+
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>

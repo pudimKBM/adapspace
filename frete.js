@@ -14,14 +14,14 @@ function LoadFrete() {
             
             $('#valor_frete').text(data);
             
-            var val_prod = $('#valor_pro').val();
-            
-            val_prod = val_prod.replace(',', '.');
+           // var val_prod = $('#valor_pro').val();
+           // 
+           // val_prod = val_prod.replace(',', '.');
             data     = data.replace(',', '.');
             
-            var total = parseFloat(data) + parseFloat(val_prod);
+            //var total = parseFloat(data) + parseFloat(val_prod);
             
-            $('#valor_prodfrete').val(total);
+            $('#valor_prodfrete').val( total);
             
             
            

@@ -1,13 +1,14 @@
 <?php
-
-require_once "../../vendor/autoload.php";
+ ini_set('display_errors',1);
+ ini_set('display_startup_erros',1);
+require_once "../../../../../vendor/autoload.php";
 
 \PagSeguro\Library::initialize();
 \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
 \PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
 $payment = new \PagSeguro\Domains\Requests\Payment();
-
+$itens = ["itens"];
 $payment->addItems()->withParameters(
     '0001',
     'Notebook prata',
@@ -56,16 +57,15 @@ $payment->setShipping()->setCost()->withParameters(20.00);
 $payment->setShipping()->setType()->withParameters(\PagSeguro\Enum\Shipping\Type::SEDEX);
 
 //Add metadata items
-$payment->addMetadata()->withParameters('PASSENGER_CPF', 'insira um numero de CPF valido');
-$payment->addMetadata()->withParameters('GAME_NAME', 'DOTA');
-$payment->addMetadata()->withParameters('PASSENGER_PASSPORT', '23456', 1);
-
+//$payment->addMetadata()->withParameters('PASSENGER_CPF', 'insira um numero de CPF valido');
+//$payment->addMetadata()->withParameters('GAME_NAME', 'DOTA');
+//$payment->addMetadata()->withParameters('PASSENGER_PASSPORT', '23456', 1);//
 //Add items by parameter
 //On index, you have to pass in parameter: total items plus one.
-$payment->addParameter()->withParameters('itemId', '0003')->index(3);
-$payment->addParameter()->withParameters('itemDescription', 'Notebook Amarelo')->index(3);
-$payment->addParameter()->withParameters('itemQuantity', '1')->index(3);
-$payment->addParameter()->withParameters('itemAmount', '200.00')->index(3);
+//$payment->addParameter()->withParameters('itemId', '0003')->index(3);
+//$payment->addParameter()->withParameters('itemDescription', 'Notebook Amarelo')->index(3);
+//$payment->addParameter()->withParameters('itemQuantity', '1')->index(3);
+//$payment->addParameter()->withParameters('itemAmount', '200.00')->index(3);
 
 //Add items by parameter using an array
 $payment->addParameter()->withArray(['notificationURL', 'http://www.lojamodelo.com.br/nofitication']);

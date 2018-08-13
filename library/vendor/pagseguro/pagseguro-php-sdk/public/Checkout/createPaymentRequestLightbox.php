@@ -9,31 +9,49 @@ require_once "../Configuration/dynamicConfiguration.php";
 \PagSeguro\Library::initialize();
 \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
 \PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
-
-$querysel=('SELECT FROM ');
-$result = $connection->query($querysel);
-if($result->num_rows >0 ){
-    while($qsel = $result->fetch_assoc()){
-        $name  =  $qsel['name'];
-        $price  = $qsel['price1'];
-        $quantity = $qsel['quantity'];
-    }
-}
-
-$name = $_POST[''];
-$email =  $_POST[''];
-$fone = $_POST[''];
-$cpf = $_POST[''];
-$rua = $_POST[''];
-$numero = $_POST[''];
-$bairo = $_POST[''];
-$cep = $_POST[''];
-$cid =$_POST[''];
-$est = $_POST[''];
-$pais = $_POST[''];
-$apto = $_POST[''];
-
 $payment = new \PagSeguro\Domains\Requests\Payment();
+
+
+
+
+
+
+
+$querysel=('SELECT product.name as "name" , 
+product.price as price ,
+product.id as productid,
+command.quantity as quantity
+  
+FROM `command`, product
+where product.id = command.id_produit and command.statut = "ordered"');
+
+
+$name = $_POST['nome'];
+$name2 = $_POST['nome2'];
+$nasc = $_POST['nasc'];
+$sex =  $_POST['sex'];
+$email =  $_SESSION['email'];
+$fone = $_POST['tel1'];
+$cpf = $_POST['cpf'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$bairo = $_POST['bairro'];
+$cep = $_POST['cep'];
+$cid =$_POST['cidade'];
+$est = $_POST['est'];
+$comp = $_POST['complemento'];
+$pais = 'Brasil';
+$fone2 =$_POST['tel2'];
+$qins =  "INSERT INTO `pedidos`(`nome`, `sobrenome`, `nasc`, `sex`, `cpf`, `fone`, `fone2`,
+`rua`, `numero_c`, `bairro`, `complemento`, `cid`, `est`, `pais`, `cep`, `id_usr`)
+ VALUES ('[value-1'],'[value-2]','[value-3]','[value-4]',0,0,0,'[value-8]',
+0,'[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','{$_SESSION['id']}')";
+$connection->query($qins);
+
+$qup= "UPDATE pedido.usuarioid = usuario.id INTO pedido where pedido.id in () ";
+
+
+
 
 /**
  * Nome completo do comprador. Especifica o nome completo do comprador que está realizando o pagamento. Este campo é
@@ -45,8 +63,26 @@ $payment = new \PagSeguro\Domains\Requests\Payment();
  * Formato: No mínimo duas sequências de caracteres, com o limite total de 50 caracteres.
  *
  * @var string $senderName
+ * 
  */
-$payment->setSender()->setName('Antonio Vinicius');
+$qccc = "SELECT FROM pedidos where id_usr = {$_SESSION['id']} ORDER BY ASC";
+$result = $connection->query($querysel);
+if($result->num_rows >0 ){
+    while($qsel = $result->fetch_assoc()){
+        $name  =  $qsel['name'];
+        $price  = $qsel['price'];
+        $quantity = $qsel['quantity'];
+        $pid = $qsel['productid'];       
+        $payment->addItems()->withParameters(
+            "$pid",
+            "$name",
+            "$quantity",
+            $price
+        );
+        $query =  "UPDATE command SET id_ped = ''";
+}
+}
+$payment->setSender()->setName("$name"." ". "$name2");
 
 /**
  * E-mail do comprador. Especifica o e-mail do comprador que está realizando o pagamento. Este campo é opcional e você
@@ -59,30 +95,31 @@ $payment->setSender()->setName('Antonio Vinicius');
  *
  * @var string $senderEmail
  */
-$payment->setSender()->setEmail('antoniovinicus29@gmail.com');
-
+$payment->setSender()->setEmail("$email");
+$ddd = substr($fone, 0,2);
+$tel = substr($fone, 2,11);
 /** @var \PagSeguro\Domains\Phone $phone */
 $payment->setSender()->setPhone()->withParameters(
-    11,
-    56273440
+    $ddd,
+    $tel
 );
 
 /** @var \PagSeguro\Domains\Document $document */
 $payment->setSender()->setDocument()->withParameters(
     'CPF',
-    44090635888
+    $cpf
 );
 
 /** @var \PagSeguro\Domains\Address $address */
 $payment->setShipping()->setAddress()->withParameters(
-    'Av. Brig. Faria Lima',
-    '1384',
-    'Jardim Paulistano',
-    '01452002',
-    'São Paulo',
-    'SP',
+    "$rua",
+    "$numero",
+    "$bairo",
+    "$cep",
+    "$cid",
+    "$est",
     'BRA',
-    'apto. 114'
+    "$comp"
 );
 
 /** @var \PagSeguro\Domains\ShippingCost $shippingCost */
@@ -97,9 +134,9 @@ $payment->setShipping()->setType()->withParameters(\PagSeguro\Enum\Shipping\Type
  * @var \PagSeguro\Domains\Item $item
  * @var array $items
  */
-$items = ['item1'];
 
-$payment->setItems('caminhao azul');
+
+//$payment->setItems('caminhao azul');
 
 /**
  * Moeda utilizada. Indica a moeda na qual o pagamento será feito. No momento, a única opção disponível é BRL (Real).
@@ -125,7 +162,7 @@ $payment->setCurrency('BRL');
  *
  * @var string $extraAmount
  */
-$payment->setExtraAmount('29');
+
 
 /**
  * Código de referência. Define um código para fazer referência ao pagamento. Este código fica associado à transação
@@ -169,73 +206,28 @@ $payment->setReference('4440');
  * ???
  * Custom info
  */
-$payment->addParameter()->withParameters('itemId', '0003')->index(3);
-$payment->addParameter()->withParameters('itemDescription', 'Notebook Amarelo')->index(3);
-$payment->addParameter()->withParameters('itemQuantity', '1')->index(3);
-$payment->addParameter()->withParameters('itemAmount', '200.00')->index(3);
-
-/*
- * ???
- * Set discount by payment method
- */
-$payment->addPaymentMethod()->withParameters(
-    PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    PagSeguro\Enum\PaymentMethod\Config\Keys::DISCOUNT_PERCENT,
-    10.00
-);
-
-/*
- * ???
- * Set max installments without fee
- */
-$payment->addPaymentMethod()->withParameters(
-    PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    PagSeguro\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_NO_INTEREST,
-    2
-);
-
-/*
- * ???
- * Set max installments
- */
-$payment->addPaymentMethod()->withParameters(
-    PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    PagSeguro\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_LIMIT,
-    6
-);
-
-/*
- * ???
- * Set accepted payments methods group
- */
-$payment->acceptPaymentMethod()->groups(
-    \PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    \PagSeguro\Enum\PaymentMethod\Group::BALANCE
-);
-
-/*
- * ???
- * Set accepted payments methods
- */
-$payment->acceptPaymentMethod()->name(\PagSeguro\Enum\PaymentMethod\Name::DEBITO_ITAU);
-
+//
+//$payment->addParameter()->withParameters('itemId', "aaaaa")->index(3);
+//$payment->addParameter()->withParameters('itemDescription', "aaaaa")->index(3);
+//$payment->addParameter()->withParameters('itemQuantity', "3")->index(3);
+//$payment->addParameter()->withParameters('itemAmount', "200.00")->index(3);
 /*
  * ???
  * Exclude accepted payments methods group
  */
-$payment->excludePaymentMethod()->group(\PagSeguro\Enum\PaymentMethod\Group::BOLETO);
+
 
     
-//try {
-//    /** @var \PagSeguro\Domains\Requests\Payment $payment */
-//    $response = $payment->register(
-//        /** @var \PagSeguro\Domains\AccountCredentials | \PagSeguro\Domains\ApplicationCredentials $credential */
-//        $credential,
-//        true
-//    );
-//} catch (Exception $e) {
-//    die($e->getMessage());
-//}
+try {
+    /** @var \PagSeguro\Domains\Requests\Payment $payment */
+    $response = $payment->register(
+        /** @var \PagSeguro\Domains\AccountCredentials | \PagSeguro\Domains\ApplicationCredentials $credential */
+        \PagSeguro\Configuration\Configure::getAccountCredentials(),
+        true
+    );
+} catch (Exception $e) {
+    die($e->getMessage());
+}
 
 ?>
 <!DOCTYPE html>
@@ -259,6 +251,6 @@ $payment->excludePaymentMethod()->group(\PagSeguro\Enum\PaymentMethod\Group::BOL
 </head>
 <body>
 <!-- A irá exibir o modal para pagamento -->
-<script>PagSeguroLightbox(<?= $response->getCode() ?>);</script>
+<script>PagSeguroLightbox('<?= $response->getCode() ?>');</script>
 </body>
 </html>
