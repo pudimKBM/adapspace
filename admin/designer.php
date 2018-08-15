@@ -165,7 +165,9 @@ collor: black;
 
 <?php
 session_start();
-if ($_SESSION['id'] > 0 ) {
+echo $_SESSION['logged_in'];
+echo $_SESSION['id'];
+if (! isset($_SESSION['id'])  ) {
 echo "Disney";
     
 }
