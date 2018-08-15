@@ -497,40 +497,23 @@ if (! isset($_SESSION['logged_in'])) {
 						<div class="col-sm">
 							<h3 class="cor">Mudar Cor</h3>
 							<ul class="col-sm">
-								<li class="color-preview" title="White"
-									style="background-color: #ffffff;"></li>
-									<li class="color-preview" title="Teal Ice"
-									style="background-color: #b8d5d7;"></li>
-									<li class="color-preview" title="Citrus Yellow"
-									style="background-color: #9F9F9F;"></li>
-									<li class="color-preview" title="Dark Chocolate"
-									style="background-color: #EC5E5E;"></li>
-									<li class="color-preview" title="Cherry Red"
-									style="background-color: #c50404;"></li>
-<!-- 								<li class="color-preview" title="Dark Heather" -->
-<!-- 									style="background-color: #616161;"></li> -->
-<!-- 								<li class="color-preview" title="Gray" -->
-<!-- 									style="background-color: #f0f0f0;"></li> -->
-								<li class="color-preview" title="Charcoal"
-									style="background-color: #424242;"></li>
-								<li class="color-preview" title="Black"
-									style="background-color: #222222;"></li>
-									<li class="color-preview" title="Chesnut"
-									style="background-color: #5B6945;"></li>
-<!-- 								<li class="color-preview" title="Heather Orange" -->
-<!-- 									style="background-color: #fc8d74;"></li> -->
-								<li class="color-preview" title="Heather Dark Chocolate"
-									style="background-color: #91DBA1;"></li>
-<!-- 								<li class="color-preview" title="Salmon" -->
-<!-- 									style="background-color: #0DFFA7;"></li> -->
-								
-								
-								
-								
-							
-								
-								
-								
+								<li class="color-preview" title="White" style="background-color: rgba(197,22,37,1);"></li>
+									<li class="color-preview" title="Teal Ice" style="background-color: rgb(152,18,54);"></li>
+									<li class="color-preview" title="Citrus Yellow" style="background-color: rgb(259,205,222);"></li>
+									<li class="color-preview" title="Dark Chocolate" style="background-color: rgb(231,48,125);"></li>
+									<li class="color-preview" title="Cherry Red" style="background-color: rgb(1,100,175);"></li>
+ 								<li class="color-preview" title="Dark Heather" style="background-color: rgb(17,166,122);"></li>
+								<li class="color-preview" title="Gray" style="background-color: rgb(254,221,104)"></li> 
+								<li class="color-preview" title="Charcoal" style="background-color: rgb(2,165,84);"></li>
+								<li class="color-preview" title="Black" style="background-color: rgb(245,143,69);"></li>
+									<li class="color-preview" title="Chesnut" style="background-color: rgb(247,79,32);"></li>
+								<li class="color-preview" title="Heather Orange" style="background-color: rgb(255,255,255)"></li> 
+								<li class="color-preview" title="Heather Dark Chocolate" style="background-color: rgb(151,153,155);"></li>
+								<li class="color-preview" title="Salmon" style="background-color: rgb(71,49,99);"></li>
+								<li class="color-preview" title="Salmon" style="background-color: rgb(86,42,45);"></li>
+								<li class="color-preview" title="Salmon" style="background-color: rgb(23,34,65);"></li>
+								<li class="color-preview" title="Salmon" style="background-color: rgb(35,62,37);"></li>
+								<li class="color-preview" title="Salmon" style="background-color: #222222"></li>
 							</ul>
 
 						</div>
@@ -666,15 +649,15 @@ if (! isset($_SESSION['logged_in'])) {
 
 
 				</div>
-				
-			</div>
-			</div>
-			<div class="row">
-			<button type="button"
+				<button type="button"
 				class="btn btn-large btn-block col-sm-3 btn-success"
 				name="addToTheBag" id="addToTheBag" style=" 
 	margin-left: 50%;
    ">Próximo</button>
+			</div>
+			</div>
+			<div class="row">
+		
 			<!--	EDITOR      -->
 			</div>
 			</div>
