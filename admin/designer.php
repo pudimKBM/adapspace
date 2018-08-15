@@ -164,8 +164,8 @@ collor: black;
 </head>
 
 <?php
-
-if (! isset($_SESSION['id'])) {
+session_start();
+if ($_SESSION['id'] > 0 ) {
 echo "Disney";
     
 }
