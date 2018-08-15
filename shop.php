@@ -132,16 +132,23 @@ if ($_SESSION['logged_in']) {
     include 'db.php';
     
     $queryfirst = "SELECT * FROM `product` WHERE validate = 1";
-    $resultfirst = $connection->query($queryfirst);
+	$resultfirst = $connection->query($queryfirst);
     if ($resultfirst->num_rows > 0) {
+		$x=0;
         // output data of each row
         while ($rowfirst = $resultfirst->fetch_assoc()) {
+			
             $id_best = $rowfirst['id'];
             $name_best = $rowfirst['name'];
             $price_best = $rowfirst['price'];
             $thumbnail_best = $rowfirst['thumbnail'];
 			$totalsold = $rowfirst['total'];
 			$id_create = $rowfirst['id_usr'];
+			$exp_date = "{$rowfirst['exp_date']}";
+			$nomeid = "demo{$x}";
+			$nomeid2 = "mano{$x}";
+			$x ++;
+			 echo "<input hidden type='text'   id='$nomeid2'  value='$exp_date' >" ; 
 			
             
             ?>
@@ -169,6 +176,7 @@ if ($_SESSION['logged_in']) {
 										</div>
 									</div>
 								</div>
+								<p id=<?= $nomeid?>></p>
 
 								<div class="block2-txt p-t-20">
 									<a href="product-detail.php?id=<?= $id_best;?>"
@@ -208,6 +216,7 @@ if ($_SESSION['logged_in']) {
 						<!-- 							</select> -->
 						<!-- 						</div> -->
 						<!-- 					</div> -->
+						<div data-countdown="<?=$exp_date?>"></div>
 
 						<div class="flex-r-m flex-w p-t-10">
 							<div class="w-size16 flex-m flex-w">
@@ -221,7 +230,9 @@ if ($_SESSION['logged_in']) {
 								</div>
 
 								</form>
+								
 							<div
+							
 									class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
 									<!-- Button -->
 								</div>
@@ -232,6 +243,9 @@ if ($_SESSION['logged_in']) {
 								</div>
 							</div>
 						</div>
+					<input hidden type="text"    class ="mano" id="<?=$nomeid2?>"  value="<?=$exp_date ?>" >
+					
+						
 					
  <?php 
 
@@ -266,7 +280,9 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 	}
 }
 
+
 ?>
+
 					
 					</div>
 
@@ -420,6 +436,10 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 	<!--===============================================================================================-->
 	<script type="text/javascript"
 		src="vendor/sweetalert/sweetalert.min.js"></script>
+		<script type="text/javascript"
+		src="vendor/sweetalert/sweetalert.min.js"></script>
+		<script type="text/javascript"
+		src="src/js/jquery.countdown.js"></script>
 	<script type="text/javascript">
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -433,6 +453,12 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to wishlist !", "success");
 			});
+		});
+		$('[data-countdown]').each(function() {
+		  var $this = $(this), finalDate = $(this).data('countdown');
+		  $this.countdown(finalDate, function(event) {
+		    $this.html(event.strftime('%D Dias %H:%M:%S'));
+		  });
 		});
 	</script>
 
