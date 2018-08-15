@@ -171,7 +171,8 @@ error_reporting(E_ALL);
 
 
 if (! isset($_SESSION['logged_in'])) {
-    header('location : ../index.php');
+	echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/index.php' />";
+    
 }
  else {
     $id_category = $_GET['id'];
