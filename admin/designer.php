@@ -165,7 +165,7 @@ collor: black;
 
 <?php
 session_start();
-if (! isset($_SESSION['logged_in'])) {
+if (! isset($_SESSION['id'])) {
 	echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/index.php' />";
     
 }
