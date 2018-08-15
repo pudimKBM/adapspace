@@ -164,6 +164,7 @@ collor: black;
 </head>
 
 <?php
+session_start();
 if (! isset($_SESSION['logged_in'])) {
 	echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/index.php' />";
     
@@ -173,7 +174,7 @@ if (! isset($_SESSION['logged_in'])) {
     $name_category = $_GET['category'];
     $caticon = $_GET['icon'];
     
-	session_start();
+	
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
