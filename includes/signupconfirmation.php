@@ -20,7 +20,8 @@ error_reporting(E_ALL);
         
         // connecting & inserting data
         // VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
-        $query = "INSERT INTO `users`( `email`, `firstname`, `lastname`, `password`, `role`, rec_date) VALUES (
+        //INSERT INTO `users`( `email`, `firstname`, `lastname`, `password`, `role`,rec_date) VALUES ( 'pudimkbm@gmail.com', 'Antonio Vinicius ', 'Liberato', '4ffe88f79aeb122f6baf8489f7a2694d', 'admin', 0)
+        $query = "INSERT INTO `users`( `email`, `firstname`, `lastname`, `password`, `role`,rec_date) VALUES (
 '$email',
 '$firstname',
 '$lastname',
@@ -33,7 +34,7 @@ error_reporting(E_ALL);
             echo "<h5 class='red-text'>Error: " . $query . "</h5>" . $connection->error;
         }else {
             echo "<h5> conta criada com sucesso faça seu login";
-            
+            header ('location:login.php');
             include 'library/mail1.php';            
         }
         
