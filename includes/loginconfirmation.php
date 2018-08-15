@@ -53,7 +53,7 @@ if (isset($_POST['login'])) {
            ';
             echo "<h1><Strong>Logando...</Strong></h1>" ;
              
-            echo "<meta http-equiv='refresh' content='0;url=http://localhost/index.php' />";
+            echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/index.php' />";
             
             
         } 
@@ -65,7 +65,7 @@ if (isset($_POST['login'])) {
             $_SESSION['logged_in'] = 'True';
             $back = $_SERVER['HTTP_REFERER'];
            // header('location:index.php');
-           echo "<meta http-equiv='refresh' content='0;url=http://localhost/index.php' />";
+           echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/index.php' />";
            echo  '
            <div id="divCarregando" class="progresso">
                  <h3><strong>Aguarde...</strong></h3>

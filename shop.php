@@ -134,7 +134,7 @@ if ($_SESSION['logged_in']) {
     $queryfirst = "SELECT * FROM `product` WHERE validate = 1";
 	$resultfirst = $connection->query($queryfirst);
     if ($resultfirst->num_rows > 0) {
-		$x=0;
+	
         // output data of each row
         while ($rowfirst = $resultfirst->fetch_assoc()) {
 			
@@ -145,10 +145,8 @@ if ($_SESSION['logged_in']) {
 			$totalsold = $rowfirst['total'];
 			$id_create = $rowfirst['id_usr'];
 			$exp_date = "{$rowfirst['exp_date']}";
-			$nomeid = "demo{$x}";
-			$nomeid2 = "mano{$x}";
-			$x ++;
-			 echo "<input hidden type='text'   id='$nomeid2'  value='$exp_date' >" ; 
+			
+			
 			
             
             ?>
