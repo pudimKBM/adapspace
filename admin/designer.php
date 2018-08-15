@@ -164,9 +164,9 @@ collor: black;
 </head>
 
 <?php
+ob_start();
 session_start();
-echo $_SESSION['logged_in'];
-echo $_SESSION['id'];
+
 if (! isset($_SESSION['id'])  ) {
 echo "Disney";
     
@@ -1453,5 +1453,5 @@ error_reporting(E_ALL);
  
  
 </script>
-<?php }?></body>
+<?php ob_end_flush(); }?></body>
 </html>
