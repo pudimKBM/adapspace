@@ -20,7 +20,7 @@ error_reporting(E_ALL);
         
         // connecting & inserting data
         // VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
-        $query = "INSERT INTO `users`( `email`, `firstname`, `lastname`, `password`, `role`,'rec_date') VALUES (
+        $query = "INSERT INTO `users`( `email`, `firstname`, `lastname`, `password`, `role`, rec_date) VALUES (
 '$email',
 '$firstname',
 '$lastname',
