@@ -19,7 +19,7 @@
 <script type="text/javascript" src="js/html2canvas.min.js"></script>
 <script type="text/javascript" src="js/FormatMoney.js"></script>
 <script src="js/script.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
