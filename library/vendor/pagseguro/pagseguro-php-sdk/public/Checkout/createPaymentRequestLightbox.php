@@ -10,13 +10,6 @@ require_once "../Configuration/dynamicConfiguration.php";
 \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
 \PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 $payment = new \PagSeguro\Domains\Requests\Payment();
-
-
-
-
-
-
-
 $querysel=('SELECT product.name as "name" , 
 product.price as price ,
 product.id as productid,
@@ -44,15 +37,9 @@ $pais = 'Brasil';
 $fone2 =$_POST['tel2'];
 $qins =  "INSERT INTO `pedidos`(`nome`, `sobrenome`, `nasc`, `sex`, `cpf`, `fone`, `fone2`,
 `rua`, `numero_c`, `bairro`, `complemento`, `cid`, `est`, `pais`, `cep`, `id_usr`)
- VALUES ('[value-1'],'[value-2]','[value-3]','[value-4]',0,0,0,'[value-8]',
-0,'[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','{$_SESSION['id']}')";
+ VALUES ('$name','$name2','$nasc','$sex',$cpf,$fone,$fone2,'$rua',
+$numero,'$bairo','$comp','$cid','$est','$pais','$cep','{$_SESSION['id']}')";
 $connection->query($qins);
-
-$qup= "UPDATE pedido.usuarioid = usuario.id INTO pedido where pedido.id in () ";
-
-
-
-
 /**
  * Nome completo do comprador. Especifica o nome completo do comprador que está realizando o pagamento. Este campo é
  * opcional e você pode enviá-lo caso já tenha capturado os dados do comprador em seu sistema e queira evitar que ele
@@ -65,21 +52,28 @@ $qup= "UPDATE pedido.usuarioid = usuario.id INTO pedido where pedido.id in () ";
  * @var string $senderName
  * 
  */
-$qccc = "SELECT FROM pedidos where id_usr = {$_SESSION['id']} ORDER BY ASC";
+$qccc = "SELECT * FROM pedidos where id_usr = {$_SESSION['id']} ORDER BY id_ped ASC LIMIT 1";
+$rsqcc=  $connection->query($qccc);
+if($rsqcc->num_rows >0 ){
+    while ($qrsccR = $rsqcc->fetch_assoc()) {
+        $id_ped = $qrsccR['id_ped'];
+    }
+}
 $result = $connection->query($querysel);
 if($result->num_rows >0 ){
     while($qsel = $result->fetch_assoc()){
         $name  =  $qsel['name'];
         $price  = $qsel['price'];
         $quantity = $qsel['quantity'];
-        $pid = $qsel['productid'];       
+        $pid = $qsel['productid'];
+        $cid = $qsel['id'];       
         $payment->addItems()->withParameters(
             "$pid",
             "$name",
             "$quantity",
             $price
         );
-        $query =  "UPDATE command SET id_ped = ''";
+    $query =  "UPDATE command SET id_ped = $id_ped WHERE id= $cid";
 }
 }
 $payment->setSender()->setName("$name"." ". "$name2");
@@ -174,7 +168,8 @@ $payment->setCurrency('BRL');
  *
  * @var string $reference
  */
-$payment->setReference('4440');
+
+$payment->setReference("$id_ped");
 
 /**
  * URL de redirecionamento após o pagamento. Determina a URL para a qual o comprador será redirecionado após o final do
