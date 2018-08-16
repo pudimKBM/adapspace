@@ -593,7 +593,7 @@ error_reporting(E_ALL);
 							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""></button>
 							    <button id="text-strike" class="btn" style="" data-original-title="Strike"><img src="img/font_strikethrough.png" height="" width=""></button>
 							 	<button id="text-underline" class="btn" style="" data-original-title="Underline"><img src="img/font_underline.png"></button>
-								 <a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color">
+								 <a class="btn"  rel="tooltip" data-placement="top" data-original-title="Font Color">
 								 <input type="hidden" id="text-fontcolor" class="color-picker miniColors" size="7" value="#d61717" maxlength="7" autocomplete="off">
 								 
 								</a>
@@ -658,9 +658,7 @@ error_reporting(E_ALL);
 				</div>
 				<button type="button"
 				class="btn btn-large btn-block col-sm-3 btn-success"
-				name="addToTheBag" id="addToTheBag" style=" 
-	margin-left: 50%;
-   ">Próximo</button>
+				name="addToTheBag" id="addToTheBag" style="margin-left: 50%;">Próximo</button>
 			</div>
 			</div>
 			<div class="row">
@@ -856,37 +854,6 @@ error_reporting(E_ALL);
 												<option>G</option>
 												<option>GG</option>
 											</select>
-										</div>
-									</div>
-
-
-									<div class="flex-r-m flex-w p-t-10">
-										<div class="w-size16 flex-m flex-w">
-											<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
-												<button
-													class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
-													<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-												</button>
-
-												<input class="size8 m-text18 t-center num-product"
-													type="number" name="num-product" >
-
-												<button
-													class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
-													<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
-												</button>
-											</div>
-											<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
-												<p id="demo"></p>
-											</div>
-
-											<div
-												class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
-												<!-- Button -->
-												<button
-													class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"
-													disabled>Add to Cart</button>
-											</div>
 										</div>
 									</div>
 								</div>

@@ -1,5 +1,7 @@
 <?php
 session_start();
+try{
+
 
 include '../db.php';
 $target_dir = "upload/";
@@ -50,4 +52,9 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
             header('location: designer.php?id=1&category=Camisetas&icon=phone');
         }
     }
+}catch(Exception $e){
+    echo $e->getMessage();
+
+}
+
  ?>
