@@ -574,20 +574,20 @@ error_reporting(E_ALL);
 							<div class="btn-group inline pull-left" id="texteditor" style="display: block;">						  
 								<button id="font-family" class="btn dropdown-toggle" data-toggle="dropdown" data-original-title="Fonte"><i class="icon-font" style="width:19px;height:19px;" deluminate_imagetype="png"></i></button>		                      
 							    <ul class="dropdown-menu" role="menu" aria-labelledby="font-family-X">
-								    <li><a tabindex="-1" href="#" onclick="setFont('Arial');" class="Arial" data-original-title="">Arial</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Helvetica');" class="Helvetica" data-original-title="">Helvetica</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Myriad Pro');" class="MyriadPro" data-original-title="">Myriad Pro</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Delicious');" class="Delicious" data-original-title="">Delicious</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Verdana');" class="Verdana" data-original-title="">Verdana</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Georgia');" class="Georgia" data-original-title="">Georgia</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Courier');" class="Courier" data-original-title="">Courier</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Comic Sans MS');" class="ComicSansMS" data-original-title="">Comic Sans MS</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact" data-original-title="">Impact</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Monaco');" class="Monaco" data-original-title="">Monaco</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Optima');" class="Optima" data-original-title="">Optima</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Hoefler Text');" class="Hoefler Text" data-original-title="">Hoefler Text</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Plaster');" class="Plaster" data-original-title="">Plaster</a></li>
-								    <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement" data-original-title="">Engagement</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Arial');" class="Arial" data-original-title="">Arial</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Helvetica');" class="Helvetica" data-original-title="">Helvetica</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Myriad Pro');" class="MyriadPro" data-original-title="">Myriad Pro</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Delicious');" class="Delicious" data-original-title="">Delicious</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Verdana');" class="Verdana" data-original-title="">Verdana</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Georgia');" class="Georgia" data-original-title="">Georgia</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Courier');" class="Courier" data-original-title="">Courier</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Comic Sans MS');" class="ComicSansMS" data-original-title="">Comic Sans MS</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Impact');" class="Impact" data-original-title="">Impact</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Monaco');" class="Monaco" data-original-title="">Monaco</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Optima');" class="Optima" data-original-title="">Optima</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Hoefler Text');" class="Hoefler Text" data-original-title="">Hoefler Text</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Plaster');" class="Plaster" data-original-title="">Plaster</a></li>
+								    <li><a tabindex="-1"  onclick="setFont('Engagement');" class="Engagement" data-original-title="">Engagement</a></li>
 				                </ul>
 							    <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png" height="" width=""></button>
 							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""></button>
