@@ -23,11 +23,11 @@ error_reporting(E_ALL);
     $datefin= date('d-m-Y', strtotime($date. ' + 2 days'));
     $query_date = "UPDATE `users` SET `rec_date`= '$datefin',`rec_valid` = 1  WHERE `email` = '$email' ";
     $queryrecfst = $connection->query($query_date);
-    echo "email enviado";
+    echo "e-mail enviado";
     }
 
 }else {
-    echo "<h1> insira um email valido </h1>";
+    echo "<h1> insira um e-mail válido </h1>";
 }
 }
 

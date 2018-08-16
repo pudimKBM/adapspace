@@ -123,7 +123,7 @@ error_reporting(0);
 										placeholder="Sobrenome" required="required">
 								</div>
 								<div class="form-group">
-									<label>Email</label> <input class="au-input au-input--full"
+									<label>E-mail</label> <input class="au-input au-input--full"
 										type="email" name="email" placeholder="Email"
 										required="required">
 								</div>

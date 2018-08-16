@@ -81,7 +81,7 @@ if($queryval->num_rows > 0){
 						
 							<form  method="post">
 								<div class="form-group">
-									<label>Insira sua nova senha</label> <input
+									<label>Insira aqui uma nova <strong>Senha</strong></label> <input
 										class="au-input au-input--full" type="password" name="senha"
 										placeholder="Nova senha">
 								</div>

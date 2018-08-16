@@ -19,7 +19,7 @@ $query = "UPDATE `users` SET `password`= '$senha',`rec_valid` = 0 WHERE `email` 
  $connection->query($query);
 header('location: index.php');
 }else{
- echo"<h1> Você ja trocou a senha </h1>";
+ echo"<h1> Você já trocou a senha </h1>";
 }
  }
 ?>
