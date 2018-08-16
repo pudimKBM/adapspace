@@ -106,7 +106,7 @@ error_reporting(0);
 					<div class="login-content">
 						<div class="login-logo">
 							<a href="#"> <img
-								src="https://www.adaptspace.com.br/cropped-adaptgradiente-e1525390047327-png/"
+								src="IMG/adaptspac.png"
 								style="width: 150px" alt="CoolAdmin">
 							</a>
 						</div>
@@ -144,7 +144,7 @@ error_reporting(0);
 						</form>
 						<div class="register-link">
 							<p>
-								Nao tem conta ainda? <a href="register.php">Cadastre-se aqui</a>
+								Não tem conta ainda? <a href="register.php">Cadastre-se aqui</a>
 							</p>
 							<p>
 								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>

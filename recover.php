@@ -67,7 +67,7 @@ if($queryval->num_rows > 0){
 				<div class="login-wrap">
 					<div class="login-content">
 						<div class="login-logo">
-							<a href="#"> <img src="images/icon/logo.png" alt="CoolAdmin">
+							<a href="#"> <img src="IMG/adaptspac.png" alt="CoolAdmin">
 							</a>
 						</div>
 						<div class="login-form">

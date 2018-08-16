@@ -106,7 +106,7 @@ error_reporting(0);
 					<div class="login-content">
 						<div class="login-logo">
 							<a href="#"> <img
-								src="https://www.adaptspace.com.br/cropped-adaptgradiente-e1525390047327-png/"
+							src="IMG/adaptspac.png"
 								style="width: 150px" alt="CoolAdmin">
 							</a>
 						</div>
@@ -133,7 +133,7 @@ error_reporting(0);
 										required="required">
 								</div>
 								<div class="login-checkbox">
-									<label> Voçe quer ? </label> <label> <input type="radio"
+									<label> Você quer ? </label> <label> <input type="radio"
 										name="type" value="admin">Criar um produto
 									</label> <label> <input type="radio" name="type" value="client">Comprar
 										um produto

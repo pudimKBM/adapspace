@@ -33,7 +33,7 @@ error_reporting(E_ALL);
             
             echo "<h5 class='red-text'>Error: " . $query . "</h5>" . $connection->error;
         }else {
-            echo "<h5> conta criada com sucesso faça seu login";
+            echo "<h5> Conta criada com sucesso. <a href='https://adaptspace.com.br/login.php'>Clique aqui</a>Faça seu login";
             header ('location:login.php');
             include 'library/mail1.php';            
         }

@@ -113,7 +113,7 @@
     $img_title = $file;
     $id = $_POST['id'];
     $id_category =$_POST['id_cat'];
-    
+    include '../library/campaing_confirmation.php';
     // adding product
     $queryaddproduct = "INSERT INTO product(id_category, name, description, price, price2, id_picture, thumbnail, id_usr, exp_date)
   VALUES ('$id_category', '$name', '$description','$price','$price2' ,'$idproduct', '$file' , '$id','$expdate')";
