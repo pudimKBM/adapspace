@@ -831,14 +831,17 @@ error_reporting(E_ALL);
 							</div>
 
 							<div class="w-size14 p-t-30 respon5">
-								<h4 id="n" class="product-detail-name m-text16 p-b-13"><input placeholder="Boxy
-									T-Shirt with Roll Sleeve Detail" id="np" type="text"></h4>
+							<label>Nome do produto :</label><input id="np" type="text">
+								<h4 id="n" class="product-detail-name m-text16 p-b-13">Boxy
+									T-Shirt with Roll Sleeve Detail</h4>
 
 								<span id="prc" class="m-text17"> </span>
-
-								<p id="desc" class="s-text8 p-t-10"><input placeholder="Nulla eget sem vitae eros
+								
+								<label>Descrição
+						do produto :</label><input id="dp" type="text">
+								<p id="desc" class="s-text8 p-t-10">Nulla eget sem vitae eros
 									pharetra viverra. Nam vitae luctus ligula. Mauris consequat
-									ornare feugiat." id="dp" type="text"></p>
+									ornare feugiat.</p>
 
 								<!--  -->
 								<div class="p-t-33 p-b-60">
@@ -887,8 +890,7 @@ error_reporting(E_ALL);
 										</div>
 									</div>
 								</div>
-								<label>Nome do produto :</label><input id="np" type="text"> <label>Descrição
-						do produto :</label><input id="dp" type="text">
+								 
 								<form action="success.php" method="post">
 										<input type="date" name="expdatef" id="expdatef" value="" hidden> 
 										<input type="text" id="namef" name="namef" hidden> 
