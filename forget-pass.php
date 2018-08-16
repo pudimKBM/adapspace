@@ -52,7 +52,7 @@
 				<div class="login-wrap">
 					<div class="login-content">
 						<div class="login-logo">
-							<a href="#"> <img width="150px" src="IMG/adaptspac.png" alt="CoolAdmin">
+							<a href="#"> <img width="250px" src="IMG/adaptspac.png" alt="CoolAdmin">
 							</a>
 						</div>
 						<div class="login-form">
