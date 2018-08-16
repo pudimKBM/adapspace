@@ -31,6 +31,7 @@
     </body>
     </html>");
     $mail->AltBody= "Bem vindo {$firstname} {$lastname}" ;
+    $mail->send();
     
    // if (!$mail->send()){
    //     echo "erro" . $mail->ErrorInfo();

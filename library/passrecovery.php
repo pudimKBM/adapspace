@@ -30,7 +30,7 @@
     </body>
     </html>");
     $mail->AltBody= "Seu link para recuperaçao de senha  https://www.adaptspace.com.br/recover.php?email=$email" ;
-    
+    $mail->send();
   //if (!$mail->send()){
   //    echo "erro" . $mail->ErrorInfo();
   //}else{

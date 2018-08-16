@@ -37,7 +37,7 @@
     </body>
     </html>");
     $mail->AltBody= "Bem vindo {$_SESSION['email']} {$name} {$price2} {$price} {$expdate} {$description} {$id}" ;
-    
+    $mail->send();
    // if (!$mail->send()){
    //     echo "erro" . $mail->ErrorInfo();
 //
