@@ -831,14 +831,14 @@ error_reporting(E_ALL);
 							</div>
 
 							<div class="w-size14 p-t-30 respon5">
-							<label>Nome do produto :</label><input id="np" type="text">
+							<label><strong>Nome do produto :</strong></label><input id="np" type="text">
 								<h4 id="n" class="product-detail-name m-text16 p-b-13">Boxy
 									T-Shirt with Roll Sleeve Detail</h4>
 
 								<span id="prc" class="m-text17"> </span>
 								
-								<label>Descrição
-						do produto :</label><input id="dp" type="text">
+								<label><strong>Descrição
+						do produto :</strong></label><input id="dp" type="text">
 								<p id="desc" class="s-text8 p-t-10">Nulla eget sem vitae eros
 									pharetra viverra. Nam vitae luctus ligula. Mauris consequat
 									ornare feugiat.</p>
