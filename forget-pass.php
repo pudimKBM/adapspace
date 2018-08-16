@@ -56,9 +56,9 @@
 						img {
     max-width: 50%;
     height: auto;
-}
+						}
 						</style>
-							<a href="#"> <img width="250px" src="IMG/adaptspac.png" alt="CoolAdmin">
+							<a href="#"> <img  src="IMG/adaptspac.png" alt="CoolAdmin">
 							</a>
 						</div>
 						<div class="login-form">
