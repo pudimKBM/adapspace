@@ -297,7 +297,7 @@ section {
 
 .main-content {
 	padding-top: 116px;
-	min-height: 100vh;
+	min-height: auto;
 }
 
 @media ( max-width : 991px) {
@@ -312,7 +312,7 @@ section {
 
 .page-content--bge5 {
 	background: #e5e5e5;
-	height: auto;
+	height: 100vh;
 }
 
 .login-wrap {

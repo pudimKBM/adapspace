@@ -103,7 +103,7 @@ error_reporting(0);
 <div  class="conteiner">
 
 	<div class="page-wrapper">
-		<div class="page-content-bge5">
+		<div class="page-content--bge5">
 			<div class="container">
 				<div class="login-wrap">
 					<div class="login-content">
