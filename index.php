@@ -23,28 +23,22 @@
     border-color: #17a2b8;
 }
 </style>
-    <div id="mama" class="carousel slide" data-ride="carousel" style="
-    padding-top: 100px;">
-
-
-        <ul class="carousel-indicators">
+    <div id="mama" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">  
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
-           
-        </ul>
+        </ol>
 
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="img2" src="IMG/banner-luiz.png" alt="Ricky-boring">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="img2" src="IMG/Banner.jpg" alt="escreve aqui antonio">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    
-                    <a href="register.php" class="btn btn-outline-info">Comece por aqui.</button>
+                    <a href="register.php" class="btn btn-outline-info">Comece por aqui.</a>
                 </div>
             </div>
         </div>
