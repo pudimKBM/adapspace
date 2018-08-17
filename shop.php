@@ -56,7 +56,7 @@ if ($_SESSION['logged_in']) {
 	<?php include 'header.php';?>
 
 	<!-- Slide1 -->
-	<section class="slide1"  style="margin-top:60px;">
+	<section class="slide1" >
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1 item1-slick1"
@@ -150,6 +150,13 @@ if ($_SESSION['logged_in']) {
 			
             
             ?>
+<style>
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+</style>
 			
 						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
@@ -188,7 +195,7 @@ if ($_SESSION['logged_in']) {
 						<div class="flex-m flex-w p-b-10">
 							
 
-							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
+							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16" style="">
 								<select class="selection-2" name="size">
 									<option>Tamanho</option>
 									<option>P</option>
