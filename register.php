@@ -98,7 +98,8 @@ error_reporting(0);
 <!-- Header -->
 <?php include 'header.php'?>
 
-<body class="">
+<body>
+<div  class="conteiner">
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
@@ -150,7 +151,7 @@ error_reporting(0);
 									class="au-btn au-btn--block au-btn--green m-b-20"
 									id="confirmed" name="sign" class="signup" type="submit">Registrar-se</button>
 
-								<!-- <!--  <div class="social-login-content">
+								<!--   <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">register with facebook</button>
                                         <button class="au-btn au-btn--block au-btn--blue2">register with twitter</button>
@@ -171,6 +172,7 @@ error_reporting(0);
 			</div>
 		</div>
 
+	</div>
 	</div>
 
 	<!-- Jquery JS-->
