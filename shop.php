@@ -194,13 +194,14 @@ if ($_SESSION['logged_in']) {
 						<div class="flex-m flex-w p-b-10">
 							
 
-							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16" style="">
-								<select class="selection-2" name="size">
-									<option>Tamanho</option>
-									<option>P</option>
-									<option>M</option>
-									<option>G</option>
-									<option>GG</option>
+
+							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
+								<select class="dropdown" name="size">
+									<option class="dropdown-item">Tamanho</option>
+									<option class="dropdown-item" >P</option>
+									<option class="dropdown-item" >M</option>
+									<option class="dropdown-item">G</option>
+									<option class="dropdown-item">GG</option>
 								</select>
 							</div>
 						</div>
