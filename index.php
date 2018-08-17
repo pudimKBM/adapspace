@@ -44,7 +44,7 @@
                 <img class="img2" src="IMG/Banner.jpg" alt="escreve aqui antonio">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
                     
-                    <button type="button" class="btn btn-outline-info">Comece por aqui.</button>
+                    <a href="register.php" class="btn btn-outline-info">Comece por aqui.</button>
                 </div>
             </div>
         </div>
