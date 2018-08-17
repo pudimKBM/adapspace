@@ -173,7 +173,7 @@ if ($_SESSION['logged_in']) {
 										</div>
 									</div>
 								</div>
-								<div  class="row countdonw_container">
+								<div  class="row countdonw_container" style="margin-left: 38px;">
 										<div class="row" >
 											<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
 										</div >
@@ -183,7 +183,7 @@ if ($_SESSION['logged_in']) {
 								</div>
 								<p id=<?= $nomeid?>></p>
 
-								<div class="block2-txt p-t-20">
+								<div class="block2-txt p-t-20" style="margin-left: 16px;">
 									<a class="block2-name dis-block l-text1 p-b-5" style="font-size: 22px; color: #5f4949;">
 										<?= $name_best; ?>
 									</a> <span class="block2-price l-text1 p-r-5" style="font-size: 22px; color: #5f4949;">
