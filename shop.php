@@ -173,13 +173,21 @@ if ($_SESSION['logged_in']) {
 										</div>
 									</div>
 								</div>
+								<div class="row">
+								<div class="row" >
+								<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
+								</div>
+								<div class="row" >
+								<span>DIAS : HORAS : MIN : SEG </span>
+								</div>
+								</div>
 								<p id=<?= $nomeid?>></p>
 
 								<div class="block2-txt p-t-20">
 									<a href="product-detail.php?id=<?= $id_best;?>"
-										class="block2-name dis-block s-text3 p-b-5">
+										class="block2-name dis-block g-text3 p-b-5">
 										<?= $name_best; ?>
-									</a> <span class="block2-price m-text6 p-r-5">
+									</a> <span class="block2-price g-text6 p-r-5">
 										R$<?= $price_best; ?>
 									</span>
 									
@@ -212,13 +220,9 @@ if ($_SESSION['logged_in']) {
 						<!-- 								<option>Blue</option> -->
 						<!-- 							</select> -->
 						<!-- 						</div> -->
-						<!-- 					</div> -->
-						<div class="row" >
-						<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
-						</div>
-						<div class="row" >
-						<span>DIAS : HORAS : MIN : SEG </span>
-						</div>
+						<!-- 
+											</div> -->
+						
 						
 						
 
