@@ -215,7 +215,9 @@ if ($_SESSION['logged_in']) {
 						<!-- 							</select> -->
 						<!-- 						</div> -->
 						<!-- 					</div> -->
-						<div data-countdown="<?=$exp_date?>"></div>
+						<div class="row" data-countdown="<?=$exp_date?>"></div>
+						<div calss="row">Dias hora min seg</div>
+						
 
 						<div class="flex-r-m flex-w p-t-10">
 							<div class="w-size16 flex-m flex-w">
@@ -450,7 +452,7 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		$('.block2-btn-addwishlist').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "Adicionado awishlist !", "success");
+				swal(nameProduct, "Adicionado a wishlist !", "success");
 			});
 		});
 		$('[data-countdown]').each(function() {
