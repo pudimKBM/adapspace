@@ -215,7 +215,11 @@ if ($_SESSION['logged_in']) {
 						<!-- 							</select> -->
 						<!-- 						</div> -->
 						<!-- 					</div> -->
-						<div class="row" ><span data-countdown="<?=$exp_date?>"></span></div>
+						<div class="row" >
+						<span data-countdown="<?=$exp_date?>"></span>
+						<span>Dia Hora Min Seg</span>
+						
+						</div>
 						
 						
 
