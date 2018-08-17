@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
     
     if ($email !== $user_email && $password !== $user_password) {
         echo "<div class='center-align meh'>
-  <h5 class='red-text'>Usuario ou senha invalidos</h5>
+  <h5 class='red-text'>Usuario ou senha inválidos</h5>
 </div>";
     } 
     else {

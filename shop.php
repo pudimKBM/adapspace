@@ -450,13 +450,13 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		$('.block2-btn-addwishlist').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
+				swal(nameProduct, "Adicionado awishlist !", "success");
 			});
 		});
 		$('[data-countdown]').each(function() {
 		  var $this = $(this), finalDate = $(this).data('countdown');
 		  $this.countdown(finalDate, function(event) {
-		    $this.html(event.strftime('%D Dias %H:%M:%S'));
+		    $this.html(event.strftime('%D : %H : %M : %S'));
 		  });
 		});
 	</script>
