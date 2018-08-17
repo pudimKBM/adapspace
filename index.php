@@ -194,11 +194,10 @@
     <button class="back-to-top" type="button"> <span style="font-size: 1.2em; color: white;">
                       <i class="fas fa-caret-up"></i>
                         </span></button>
-
+<!--
  <div class="p-5">
         <div class="container pt-3" >
             <div class="row justify-content-center">
-                <!-- Single Catagory -->
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-2.png);">
                         <div class="catagory-content">
@@ -206,7 +205,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Single Catagory -->
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-3.png);">
                         <div class="catagory-content">
@@ -214,12 +212,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Single Catagory -->
             </div>
         </div>
     </div>
-   
-  
+    -->
    <?php include 'footer.php' ?>
    
 
