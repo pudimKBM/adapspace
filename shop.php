@@ -122,8 +122,6 @@ if ($_SESSION['logged_in']) {
 <!-- 								</select> -->
 <!-- 							</div> -->
 <!-- 						</div> -->
-
-						<span class="s-text8 p-t-5 p-b-5"> Showing 1–12 of 16 results </span>
 					</div>
 
 					<!-- Product -->
@@ -216,9 +214,10 @@ if ($_SESSION['logged_in']) {
 						<!-- 						</div> -->
 						<!-- 					</div> -->
 						<div class="row" >
-						<span class="row" data-countdown="<?=$exp_date?>"></span>
-						<span class="row" >Dia Hora Min Seg</span>
-						
+						<span  data-countdown="<?=$exp_date?>"></span>
+						</div>
+						<div class="row" >
+						<span>DIAS : HORAS : MIN : SEG </span>
 						</div>
 						
 						
