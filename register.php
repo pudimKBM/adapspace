@@ -99,7 +99,7 @@ error_reporting(0);
 <?php include 'header.php'?>
 
 <body>
-<section>
+
 <div  class="conteiner">
 
 	<div class="page-wrapper">
@@ -176,7 +176,7 @@ error_reporting(0);
 
 	</div>
 	</div>
-	</section>
+	
 	<!-- Jquery JS-->
 	<script src="vendor2/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap JS-->
