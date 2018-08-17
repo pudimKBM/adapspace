@@ -185,9 +185,9 @@ if ($_SESSION['logged_in']) {
 
 								<div class="block2-txt p-t-20">
 									<a href="product-detail.php?id=<?= $id_best;?>"
-										class="block2-name dis-block g-text3 p-b-5">
+										class="block2-name dis-block bg-text3 p-b-5">
 										<?= $name_best; ?>
-									</a> <span class="block2-price g-text6 p-r-5">
+									</a> <span class="block2-price bg-text6 p-r-5">
 										R$<?= $price_best; ?>
 									</span>
 									
