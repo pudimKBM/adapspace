@@ -195,7 +195,7 @@ if ($_SESSION['logged_in']) {
 							
 
 
-							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
+							<div class=" dropdown-success  rs2-select2 rs3-select2 bo4 of-hidden w-size16">
 								<select class="dropdown" name="size">
 									<option class="dropdown-item">Tamanho</option>
 									<option class="dropdown-item" >P</option>
