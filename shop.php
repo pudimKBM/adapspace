@@ -216,8 +216,8 @@ if ($_SESSION['logged_in']) {
 						<!-- 						</div> -->
 						<!-- 					</div> -->
 						<div class="row" >
-						<span data-countdown="<?=$exp_date?>"></span>
-						<span>Dia Hora Min Seg</span>
+						<span class="row" data-countdown="<?=$exp_date?>"></span>
+						<span class="row" >Dia Hora Min Seg</span>
 						
 						</div>
 						
