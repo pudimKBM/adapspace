@@ -99,8 +99,9 @@ error_reporting(0);
 <?php include 'header.php'?>
 
 <body>
-<div  class="conteiner">
 <section>
+<div  class="conteiner">
+
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
