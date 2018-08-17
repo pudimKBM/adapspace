@@ -2,7 +2,7 @@
 include 'db.php';
   
   
-error_reporting(E_ALL);
+if (isset($_POST['senha'])){
 $senhaa = $_POST['senha'];
 $senha = md5($senhaa);
 $email = $_GET['email'];
@@ -14,7 +14,7 @@ $queryrec = "SELECT * FROM `users` WHERE `email`= '$email'";
         
 
      }
-if ($rec_valid == 1){
+if ( $rec_valid == 1){
 $query = "UPDATE `users` SET `password`= '$senha',`rec_valid` = 0 WHERE `email` = '$email' ";
  $connection->query($query);
 header('location: index.php');
@@ -22,4 +22,5 @@ header('location: index.php');
  echo"<h1> Você já trocou a senha </h1>";
 }
  }
+}
 ?>

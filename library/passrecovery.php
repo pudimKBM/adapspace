@@ -14,7 +14,7 @@
       
       $mail->setFrom('adm@adaptspace.com.br','AdaptSpace'); 
 
-    $mail->addAddress("$email", "antoniovinicius");
+    $mail->addAddress("$email", "$firstname");
     //$mail->addBCC("adm@adaptspace.com.br", "AdaptSpace");
     $mail->Subject = 'Recuperaçao de senha AdaptSpace';
     $mail->msgHTML("

@@ -1,9 +1,6 @@
 <?php
 if (isset($_POST['submit'])){
 include 'db.php'; 
-  
-  
-error_reporting(E_ALL);
     $email =  $_POST['email'];
     $queryrec = "SELECT * FROM `users` WHERE `email`= '$email'";
     $queryrecfst = $connection->query($queryrec);
