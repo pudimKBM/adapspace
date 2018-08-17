@@ -23,7 +23,8 @@
     border-color: #17a2b8;
 }
 </style>
-    <div id="mama" class="carousel slide" data-ride="carousel" style="">
+    <div id="mama" class="carousel slide" data-ride="carousel" style="
+    padding-top: 100px;">
 
 
         <ul class="carousel-indicators">
