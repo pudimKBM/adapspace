@@ -113,7 +113,7 @@ error_reporting(0);
 						<div class="login-form">
 							<form action="" method="post">
 								<div class="form-group">
-									<label>Email</label> <input
+									<label>E-mail</label> <input
 										class="au-input au-input--full" type="email" name="emaillog"
 										placeholder="Email">
 								</div>
@@ -147,7 +147,7 @@ error_reporting(0);
 								Não tem conta ainda? <a href="register.php">Cadastre-se aqui</a>
 							</p>
 							<p>
-								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>
+								Esqueceu sua Senha <a href="forget-pass.php">Clique aqui</a>
 							</p>
 						</div>
 					</div>
