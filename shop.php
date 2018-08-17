@@ -64,9 +64,9 @@ if ($_SESSION['logged_in']) {
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false zoomIn visible-true" data-appear="zoomIn">
-							<!-- Button
+							<!-- Button -->
 							<a style="margin-top:400px;background-color:#49eabe;" href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" tabindex="0">
-								COMPRAR </a> -->
+								COMPRAR </a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@ if ($_SESSION['logged_in']) {
 <!-- 								class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10"> -->
 <!-- 								<select class="selection-2" name="sorting"> -->
 <!-- 									<option>Default Sorting</option> -->
-<!-- 									<option>Popularity</option> -->
+<!-- 									<option>Popularity</option> -->-->
 <!-- 									<option>Price: low to high</option> -->
 <!-- 									<option>Price: high to low</option> -->
 <!-- 								</select> -->
@@ -151,13 +151,6 @@ if ($_SESSION['logged_in']) {
 			
             
             ?>
-<style>
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-</style>
 			
 						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
@@ -397,6 +390,8 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 	</section>
 
 	<!-- Shipping -->
+
+
 
 
 	<!-- Back to top -->
