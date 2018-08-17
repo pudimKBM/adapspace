@@ -46,6 +46,7 @@
 </head>
 
 <body class="">
+<?php include('header.php'); ?>
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
