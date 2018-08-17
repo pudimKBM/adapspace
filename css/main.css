@@ -103,6 +103,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*[ RESTYLE TAG ]
 ///////////////////////////////////////////////////////////
 */
+.countdown_name{
+	font-size: 30px;
+}
 * {
 	margin: 0px;
 	padding: 0px;

@@ -99,6 +99,7 @@ error_reporting(0);
 <?php include 'header.php'?>
 
 <body class="">
+<section>
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
@@ -157,6 +158,7 @@ error_reporting(0);
 	</div>
 
 	</div>
+	</section>
 
 	<!-- Jquery JS-->
 	<script src="vendor2/jquery-3.2.1.min.js"></script>
@@ -182,6 +184,7 @@ error_reporting(0);
 
 	<!-- Main JS-->
 	<script src="js/main0.js"></script>
+	
 
 </body>
 
