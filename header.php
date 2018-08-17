@@ -34,7 +34,7 @@ session_start();
                     <a class="nav-link" href="shop.php">SHOP</a>
                 </li>
                 <li class="nav-item  pl-5 pr-5">
-                    <a class="nav-link" href="link do adapt influencers">INFLUENCERS</a>
+                    <a class="nav-link" href="http://www.adapt-influencers.esy.es">INFLUENCERS</a>
                 </li>
             </ul>
 
