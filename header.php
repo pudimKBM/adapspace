@@ -19,7 +19,7 @@ session_start();
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a  href="index.php"><img style="width:130px;" src="images/logo-adaptspace.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
             <span class="navbar-toggler-icon"></span>
