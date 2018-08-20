@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+
     var feed = new Instafeed({
         get: 'user',
         tagName: 'doggies',
@@ -10,4 +10,4 @@ $(document).ready(function () {
     });
     feed.run();
    
-})
+
