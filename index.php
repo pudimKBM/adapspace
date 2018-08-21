@@ -98,7 +98,7 @@
                     </div>
                 </div> -->
 
-                <div class="col-sm-6 col-md-6" align="center">
+                <div class="col-sm-6 col-md-6" >
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -111,7 +111,7 @@
                                             <h5 class="card-subtitle mb-2 font-in">1.000.000 Seguidores</h6>
                                                 <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fas fa-angle-double-right"></i>
-                        </span>
+                        </span>     
                                         </div>
                                     </div>
                                 </div>
@@ -119,8 +119,8 @@
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
-                                        <h4 class="card-title font-in">Aguarde</h4>
-                                        <p class="card-text font-in"></p>
+                                        <!-- <h4 class="card-title font-in">Sunlimetech</h4>
+                                        <p class="card-text font    -in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p> -->
                                         <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-facebook-square "></i>
                         </span>
