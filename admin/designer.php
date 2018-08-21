@@ -542,7 +542,7 @@ error_reporting(E_ALL);
 							<form action="Uploadds.php" method="post" enctype="multipart/form-data">
 										Selecione uma imagem para adicionar:
 										<div class= "row" >
-    									<input type="file" name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
+    									<input type="file" data-toggle="popover" data-trigger="hover" data-content="Voce pode mandar uma imagem .jpg, .png e .svg. Recomendamos imagen com resolção de 2400x3300 pixels." name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
  										</div>
 							</form>
 							<div id="avatarlist">
@@ -702,9 +702,9 @@ error_reporting(E_ALL);
 					<div class="col-sm-6">
 						<table class="table">
 							<tr>
-								<td><strong>itens</strong></td>
-								<td><strong>ganho p/unidade</strong></td>
-								<td><strong>total</strong></td>
+								<td><strong>Itens</strong></td>
+								<td><strong>Ganho p/ unidade</strong></td>
+								<td><strong>Total</strong></td>
 							</tr>
 							<tr>
 								<td>50</td>
