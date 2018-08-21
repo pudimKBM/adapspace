@@ -218,7 +218,7 @@ if ($_SESSION['logged_in']) {
 }}if (isset($_POST['buy'])) {
 			      
 	if (! isset($_SESSION['logged_in'])) {
-		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Smartshop/sign' />";
+		echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/login.php' />";
 	}else if($_POST['size'] == "Tamanho"){
 		
 	}
