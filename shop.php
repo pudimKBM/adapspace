@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>Home</title>/
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="images/icons/favicon.png" />
@@ -65,8 +66,7 @@ if ($_SESSION['logged_in']) {
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false zoomIn visible-true" data-appear="zoomIn">
 							<!-- Button -->
-							<a style="margin-top:400px;background-color:#49eabe;" href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" tabindex="0">
-								COMPRAR </a>
+							
 						</div>
 					</div>
 				</div>
@@ -77,6 +77,7 @@ if ($_SESSION['logged_in']) {
 		</div>
 	</section>
 
+<<<<<<< HEAD
 	<!-- Content page -->
 	<section class="bgwhite p-t-55 p-b-65">
 		<div class="container">
@@ -123,9 +124,11 @@ if ($_SESSION['logged_in']) {
 <!-- 							</div> -->
 <!-- 						</div> -->
 					</div>
+=======
+>>>>>>> xdxd
 
 					<!-- Product -->
-					<div class="row">
+					<div class="your-class">
 					<?php
     
     include 'db.php';
@@ -289,9 +292,7 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 }
 
 
-?>
-
-					
+?>					
 					</div>
 
 					<!-- Pagination -->
@@ -354,6 +355,10 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 			dropdownParent: $('#dropDownSelect1')
 		});
 	</script>
+
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
@@ -390,6 +395,11 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		    $this.html(event.strftime('%D : %H : %M : %S'));
 		  });
 		});
+		$(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
 	</script>
 
 	<!--===============================================================================================-->
