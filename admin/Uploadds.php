@@ -1,9 +1,13 @@
 <?php
 session_start();
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+include '../db.php';
 try{
 
 
-include '../db.php';
+
 $target_dir = "upload/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -21,7 +25,7 @@ if(isset($_POST["submit"])) {
 }
 
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["fileToUpload"]["size"] > 5000000000) {
     echo "Aquivo muito grande";
     $uploadOk = 0;
 }
@@ -42,7 +46,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
             $queryadd ="INSERT INTO uploads( `path`, `usr_id`) values ('{$target_file}', '{$_SESSION['id']}')";
             if ($connection->query($queryadd) === true){
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-                header('location: designer.php?id=1&category=Camisetas&icon=phone');
+               header('location: designer.php?id=1&category=Camisetas&icon=phone');
             }
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             header('location: designer.php?id=1&category=Camisetas&icon=phone');

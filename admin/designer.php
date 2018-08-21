@@ -658,7 +658,7 @@ error_reporting(E_ALL);
 				</div>
 				<button type="button"
 				class="btn btn-large btn-block col-sm-3 btn-success"
-				name="addToTheBag" id="addToTheBag" style="margin-left: 50%;">Próximo</button>
+				name="addToTheBag" id="addToTheBag" style="margin-left: 66%;">Próximo</button>
 			</div>
 			</div>
 			<div class="row">
@@ -791,7 +791,7 @@ error_reporting(E_ALL);
 
 
 				</div>
-				<div class="row">
+				<div  class="row " style="margin-left: 16%;">
 				<button type="button"
 					class="btn btn-large btn-block col-sm-3 btn-success"
 					name="addToTheBag" id="addToTheBag3">Voltar</button>
@@ -855,6 +855,22 @@ error_reporting(E_ALL);
 												<option>GG</option>
 											</select>
 										</div>
+									</div>
+									<div  class="row" style="margin-left: 38px;">
+										<div  class="row" >
+										<div id="demo" class="flex-m flex-w p-b-10" style="font-size: 30px;font-family: monospace;font-stretch:;letter-spacing: 6px;">
+										</div >
+								</div>
+								</div>
+								<div class="row" >
+											<span style="
+    margin-left: 37px;
+    letter-spacing: 1.48px;
+" >DIAS : HORAS : MIN : SEG </span>
+										</div>
+									
+									
+
 									</div>
 								</div>
 								 
@@ -1154,8 +1170,7 @@ error_reporting(E_ALL);
 					// Set the date we're counting down to
 					
 				
-						
-	                var countDownDate;
+					
 
  					
 	                // Update the count down every 1 second
@@ -1187,8 +1202,8 @@ error_reporting(E_ALL);
 	 						}
 	                    
 	                    // Output the result in an element with id="demo"
-	                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-	                    + minutes + "m " + seconds + "s ";
+	                    document.getElementById("demo").innerHTML = days + ":" + hours + ":"
+	                    + minutes + ":" + seconds ;
 	                    
 	                    // If the count down is over, write some text 
 	                    if (distance < 0) {
@@ -1303,7 +1318,10 @@ error_reporting(E_ALL);
 								$('#vrau').hide(500);
 								$('#vrau2').show(500);
 							}else{
-    							$('[data-toggle="popover"]').popover();   
+								$('[data-toggle="popover"]').popover({
+									trigger: 'focus'
+								});   
+								
 							}
 								
 
@@ -1336,6 +1354,7 @@ error_reporting(E_ALL);
 								$('#desc').text(desc);
 								$('#descf').val(desc);
 							})
+							
 							
 
 							
@@ -1408,17 +1427,10 @@ error_reporting(E_ALL);
     <script src="node_modules/bootstrap/js.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
+	<script type="text/javascript"
+		src="../vendor/countdowntime/countdowntime.js"></script>
 
-  /* var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35639689-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
- */
  
  
 </script>
