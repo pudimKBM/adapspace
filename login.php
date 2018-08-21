@@ -56,7 +56,7 @@ error_reporting(0);
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+ 
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
 	href="vendor/bootstrap/css/bootstrap.min.css">
@@ -99,6 +99,7 @@ error_reporting(0);
 <?php include 'header.php'?>
 
 <body class="">
+<section>
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
@@ -113,7 +114,7 @@ error_reporting(0);
 						<div class="login-form">
 							<form action="" method="post">
 								<div class="form-group">
-									<label>Email</label> <input
+									<label>E-mail</label> <input
 										class="au-input au-input--full" type="email" name="emaillog"
 										placeholder="Email">
 								</div>
@@ -147,7 +148,7 @@ error_reporting(0);
 								Não tem conta ainda? <a href="register.php">Cadastre-se aqui</a>
 							</p>
 							<p>
-								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>
+								Esqueceu sua Senha <a href="forget-pass.php">Clique aqui</a>
 							</p>
 						</div>
 					</div>
@@ -157,6 +158,7 @@ error_reporting(0);
 	</div>
 
 	</div>
+	</section>
 
 	<!-- Jquery JS-->
 	<script src="vendor2/jquery-3.2.1.min.js"></script>
@@ -182,6 +184,7 @@ error_reporting(0);
 
 	<!-- Main JS-->
 	<script src="js/main0.js"></script>
+	
 
 </body>
 

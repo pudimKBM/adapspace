@@ -22,18 +22,16 @@
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item mr-3">
                             <span style="font-size: 1.7em; color: white;">
-                        <i class="fab fa-facebook-square "></i>
-                        </span>
-                        </li>
-                        <li class="list-inline-item mr-3">
-
-                            <span style="font-size: 1.7em; color: white;">
-                        <i class="fab fa-twitter-square "></i>
+                            <a href="https://www.facebook.com/ShopAdapt/">
+                                <i class="fab fa-facebook-square "></i>
+                            </a>
                         </span>
                         </li>
                         <li class="list-inline-item">
                             <span style="font-size: 1.7em; color: white;">
-                        <i class="fab fa-instagram "></i>
+                        <a href="https://www.instagram.com/adaptspace/?hl=pt-br">
+                            <i class="fab fa-instagram "></i>
+                        </a>
                         </span>
                         </li>
                     </ul>

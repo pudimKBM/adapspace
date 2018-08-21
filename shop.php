@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+ 
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
 	href="vendor/bootstrap/css/bootstrap.min.css">
@@ -56,7 +56,7 @@ if ($_SESSION['logged_in']) {
 	<?php include 'header.php';?>
 
 	<!-- Slide1 -->
-	<section class="slide1"  style="margin-top:60px;">
+	<section class="slide1" >
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1 item1-slick1"
@@ -65,8 +65,7 @@ if ($_SESSION['logged_in']) {
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false zoomIn visible-true" data-appear="zoomIn">
 							<!-- Button -->
-							<a style="margin-top:400px;background-color:#49eabe;" href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" tabindex="0">
-								COMPRAR </a>
+							
 						</div>
 					</div>
 				</div>
@@ -81,49 +80,6 @@ if ($_SESSION['logged_in']) {
 	<section class="bgwhite p-t-55 p-b-65">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
-					<div class="leftbar p-r-20 p-r-0-sm">
-						<!--  -->
-						<h4 class="m-text14 p-b-7">Categorias</h4>
-
-						<ul class="p-b-54">
-							<li class="p-t-4"><a  class="s-text13 active1"> All </a>
-							</li>
-
-							<li class="p-t-4"><a  class="s-text13">Influencers </a></li>
-						</ul>
-
-						<!--  -->
-
-
-						<div class="search-product pos-relative bo4 of-hidden">
-							<input class="s-text7 size6 p-l-23 p-r-50" type="text"
-								name="search-product" placeholder="Search Products...">
-
-							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
-					<!--  -->
-					<div class="flex-sb-m flex-w p-b-35">
-<!-- 						<div class="flex-w"> -->
-<!-- 							<div -->
-<!-- 								class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10"> -->
-<!-- 								<select class="selection-2" name="sorting"> -->
-<!-- 									<option>Default Sorting</option> -->
-<!-- 									<option>Popularity</option> -->
-<!-- 									<option>Price: low to high</option> -->
-<!-- 									<option>Price: high to low</option> -->
-<!-- 								</select> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-
-						<span class="s-text8 p-t-5 p-b-5"> Showing 1–12 of 16 results </span>
-					</div>
 
 					<!-- Product -->
 					<div class="row">
@@ -151,7 +107,7 @@ if ($_SESSION['logged_in']) {
             
             ?>
 			
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class="col-sm-6">
 							<!-- Block2 -->
 							<div class="block2">
 								<div
@@ -174,13 +130,20 @@ if ($_SESSION['logged_in']) {
 										</div>
 									</div>
 								</div>
+								<div  class="row countdonw_container" style="margin-left: 38px;">
+										<div class="row" >
+											<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
+										</div >
+										<div class="row" style="font-size: 10px;" >
+											<span>DIAS : HORAS : MIN : SEG </span>
+										</div>
+								</div>
 								<p id=<?= $nomeid?>></p>
 
-								<div class="block2-txt p-t-20">
-									<a href="product-detail.php?id=<?= $id_best;?>"
-										class="block2-name dis-block s-text3 p-b-5">
+								<div class="block2-txt p-t-20" style="margin-left: 16px;">
+									<a class="block2-name dis-block l-text1 p-b-5" style="font-size: 22px; color: #5f4949;">
 										<?= $name_best; ?>
-									</a> <span class="block2-price m-text6 p-r-5">
+									</a> <span class="block2-price l-text1 p-r-5" style="font-size: 22px; color: #5f4949;">
 										R$<?= $price_best; ?>
 									</span>
 									
@@ -188,13 +151,14 @@ if ($_SESSION['logged_in']) {
 						<div class="flex-m flex-w p-b-10">
 							
 
-							<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
-								<select class="selection-2" name="size">
-									<option>Tamanho</option>
-									<option>P</option>
-									<option>M</option>
-									<option>G</option>
-									<option>GG</option>
+
+							<div class=" dropdown-success  rs2-select2 rs3-select2 bo4 of-hidden w-size16">
+								<select class="custom-select col" name="size">
+									<option class="dropdown-item">Tamanho</option>
+									<option class="dropdown-item" >P</option>
+									<option class="dropdown-item" >M</option>
+									<option class="dropdown-item">G</option>
+									<option class="dropdown-item">GG</option>
 								</select>
 							</div>
 						</div>
@@ -213,8 +177,11 @@ if ($_SESSION['logged_in']) {
 						<!-- 								<option>Blue</option> -->
 						<!-- 							</select> -->
 						<!-- 						</div> -->
-						<!-- 					</div> -->
-						<div data-countdown="<?=$exp_date?>"></div>
+						<!-- 
+											</div> -->
+						
+						
+						
 
 						<div class="flex-r-m flex-w p-t-10">
 							<div class="w-size16 flex-m flex-w">
@@ -251,7 +218,7 @@ if ($_SESSION['logged_in']) {
 }}if (isset($_POST['buy'])) {
 			      
 	if (! isset($_SESSION['logged_in'])) {
-		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Smartshop/sign' />";
+		echo "<meta http-equiv='refresh' content='0;url=http://adaptspace.com.br/login.php' />";
 	}else if($_POST['size'] == "Tamanho"){
 		
 	}
@@ -279,9 +246,7 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 }
 
 
-?>
-
-					
+?>					
 					</div>
 
 					<!-- Pagination -->
@@ -293,7 +258,7 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 
 
 	<!-- Blog -->
-
+	
 
 	<!-- Instagram -->
 	<section class="instagram p-t-20">
@@ -301,88 +266,9 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 			<h3 class="m-text5 t-center">@ Siga nosso Instagram</h3>
 		</div>
 
-		<div class="flex-w">
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-03.jpg" alt="IMG-INSTAGRAM"> <a href="https://www.instagram.com/adaptspace/"
-					class="block4-overlay sizefull ab-t-l trans-0-4"> <span
-					class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i> <span
-						class="p-t-2">39</span>
-				</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">Nullam scelerisque,
-							lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex
-							nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut
-							sit amet enim orci. Nam eget metus elit.</p>
-
-						<span class="s-text9"> Photo by @nancyward </span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-07.jpg" alt="IMG-INSTAGRAM"> <a href="https://www.instagram.com/adaptspace/"
-					class="block4-overlay sizefull ab-t-l trans-0-4"> <span
-					class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i> <span
-						class="p-t-2">39</span>
-				</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">Nullam scelerisque,
-							lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex
-							nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut
-							sit amet enim orci. Nam eget metus elit.</p>
-
-						<span class="s-text9"> Photo by @nancyward </span>
-					</div>
-				</a>
-			</div>
-
-		
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-13.jpg" alt="IMG-INSTAGRAM"> <a href="https://www.instagram.com/adaptspace/"
-					class="block4-overlay sizefull ab-t-l trans-0-4"> <span
-					class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i> <span
-						class="p-t-2">39</span>
-				</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">Nullam scelerisque,
-							lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex
-							nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut
-							sit amet enim orci. Nam eget metus elit.</p>
-
-						<span class="s-text9"> Photo by @nancyward </span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-15.jpg" alt="IMG-INSTAGRAM"> <a href="https://www.instagram.com/adaptspace/"
-					class="block4-overlay sizefull ab-t-l trans-0-4"> <span
-					class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i> <span
-						class="p-t-2">39</span>
-				</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">Nullam scelerisque,
-							lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex
-							nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut
-							sit amet enim orci. Nam eget metus elit.</p>
-
-						<span class="s-text9"> Photo by @nancyward </span>
-					</div>
-				</a>
-			</div>
+		<div id="instafeed" class="flex-w">
+			
+			
 		</div>
 		
 		
@@ -404,7 +290,8 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 	<div id="dropDownSelect1"></div>
 
 
-
+	<script type="text/javascript" src="js/instafeed.min.js"></script>
+	<script type="text/javascript" src="js/ista.js"></script>
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
@@ -449,13 +336,13 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		$('.block2-btn-addwishlist').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
+				swal(nameProduct, "Adicionado a wishlist !", "success");
 			});
 		});
 		$('[data-countdown]').each(function() {
 		  var $this = $(this), finalDate = $(this).data('countdown');
 		  $this.countdown(finalDate, function(event) {
-		    $this.html(event.strftime('%D Dias %H:%M:%S'));
+		    $this.html(event.strftime('%D : %H : %M : %S'));
 		  });
 		});
 	</script>

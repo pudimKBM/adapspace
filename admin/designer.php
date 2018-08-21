@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<link rel="icon" type="image/png" href="../IMG/favicon.png" />
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,7 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+ 
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
 	href="vendor/bootstrap/css/bootstrap.min.css">
@@ -71,6 +71,20 @@
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <script type="text/javascript">
 	 </script>
+<script>
+
+	$("[data-toggle=popover]").each(function(i, obj) {
+
+$(this).popover({
+  html: true,
+  content: function() {
+    var id = $(this).attr('id')
+    return $('#popover-content-' + id).html();
+  }
+});
+
+});
+</script>
 <style type="text/css">
 body {
 	padding-top: 60px;
@@ -542,7 +556,7 @@ error_reporting(E_ALL);
 							<form action="Uploadds.php" method="post" enctype="multipart/form-data">
 										Selecione uma imagem para adicionar:
 										<div class= "row" >
-    									<input type="file" name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
+    									<input type="file" data-toggle="popover" title="Popover title" data-content="Voce pode mandar uma imagem .jpg, .png e .svg. Recomendamos imagen com resolção de 2400x3300 pixels." name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
  										</div>
 							</form>
 							<div id="avatarlist">
@@ -702,9 +716,9 @@ error_reporting(E_ALL);
 					<div class="col-sm-6">
 						<table class="table">
 							<tr>
-								<td><strong>itens</strong></td>
-								<td><strong>ganho p/unidade</strong></td>
-								<td><strong>total</strong></td>
+								<td><strong>Itens</strong></td>
+								<td><strong>Ganho p/ unidade</strong></td>
+								<td><strong>Total</strong></td>
 							</tr>
 							<tr>
 								<td>50</td>
@@ -795,7 +809,7 @@ error_reporting(E_ALL);
 				<button type="button"
 					class="btn btn-large btn-block col-sm-3 btn-success"
 					name="addToTheBag" id="addToTheBag3">Voltar</button>
-				<button type="button" data-toggle="popover" title="Voçe esqueceu alguma coisa" data-content="Cheque o preço e a data de começo da campanha" data-placement="top"
+				<button type="button" data-toggle="popover" title="Você esqueceu alguma coisa" data-content="Cheque o preço e a data de começo da campanha" data-placement="auto"
 					class="btn btn-large btn-block col-sm-3 btn-success" style="margin-left: 560px;"
 					name="addToTheBag" id="addToTheBag2">Próximo</button>
 				</div>	

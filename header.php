@@ -13,7 +13,7 @@ session_start();
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+    <link rel="icon" type="image/png" href="IMG/favicon.png" />
     <title>Adapt Space</title>
 </head>
 
@@ -34,7 +34,7 @@ session_start();
                     <a class="nav-link" href="shop.php">SHOP</a>
                 </li>
                 <li class="nav-item  pl-5 pr-5">
-                    <a class="nav-link" href="link do adapt influencers">INFLUENCERS</a>
+                    <a class="nav-link" href="http://www.adapt-influencers.esy.es">INFLUENCERS</a>
                 </li>
             </ul>
 
