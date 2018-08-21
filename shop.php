@@ -397,7 +397,11 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		});
 		$(document).ready(function(){
       $('.your-class').slick({
-        setting-name: setting-value
+        slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
       });
     });
 	</script>
