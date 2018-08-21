@@ -58,7 +58,7 @@
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="display: none;" >
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -104,7 +104,7 @@
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <img class="card-img-top img-card" src="IMG/luiz.jpg">
+                                        <img class="card-img-top img-card" src="IMG/ebano.jpg">
                                         <div class="card-body">
                                         <h4 class="card-title font-in">Ébano</h4>
                                             <h5 class="card-subtitle mb-2 font-in">Marca</h5>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-4" >
+                <div class="col-xs-12 col-sm-6 col-md-4" style="display: none;">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
