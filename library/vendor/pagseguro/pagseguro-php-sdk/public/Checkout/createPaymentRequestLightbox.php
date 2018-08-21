@@ -10,13 +10,13 @@ require_once "../Configuration/dynamicConfiguration.php";
 \PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
 \PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 $payment = new \PagSeguro\Domains\Requests\Payment();
-$querysel=('SELECT product.name as "name" , 
+$querysel=("SELECT product.name as 'name' , 
 product.price as price ,
 product.id as productid,
 command.quantity as quantity
   
 FROM `command`, product
-where product.id = command.id_produit and command.statut = "ordered"');
+where product.id = command.id_produit and command.statut = 'ordered' and id_user = {$_SESSION['id']}");
 
 
 $name = $_POST['nome'];
@@ -117,7 +117,7 @@ $payment->setShipping()->setAddress()->withParameters(
 );
 
 /** @var \PagSeguro\Domains\ShippingCost $shippingCost */
-$payment->setShipping()->setCost()->withParameters(20.00);
+//$payment->setShipping()->setCost()->withParameters(20.00);
 
 /** @var \PagSeguro\Domains\ShippingType $shippingType */
 $payment->setShipping()->setType()->withParameters(\PagSeguro\Enum\Shipping\Type::SEDEX);

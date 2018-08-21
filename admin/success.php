@@ -4,7 +4,7 @@
 
     
  include '../db.php';
-
+try {
     // resize_function//////////////////////////////////////////////////
     function CreateThumbs($src, $dst, $width, $height, $crop = 0)
     {
@@ -128,5 +128,8 @@
     }
     
     $connection->close();
+}catch (Exception $e) {
+    echo  $e->getMessage();
+}
 
 ?>
