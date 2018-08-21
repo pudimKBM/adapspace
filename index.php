@@ -106,9 +106,9 @@
                                     <div class="card-body text-center">
                                         <img class="card-img-top img-card" src="IMG/luiz.jpg">
                                         <div class="card-body">
-                                            <h4 class="card-title font-in">Luiz Moreno</h4>
-                                            <h5 class="card-subtitle mb-2 font-in">Ator / Youtuber</h5>
-                                            <h5 class="card-subtitle mb-2 font-in">1.000.000 Seguidores</h6>
+                                        <h4 class="card-title font-in">Ébano</h4>
+                                            <h5 class="card-subtitle mb-2 font-in">Marca</h5>
+                                            <h5 class="card-subtitle mb-2 font-in">124 Seguidores</h6>
                                                 <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fas fa-angle-double-right"></i>
                         </span>     
