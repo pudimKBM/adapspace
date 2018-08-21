@@ -58,7 +58,7 @@
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
