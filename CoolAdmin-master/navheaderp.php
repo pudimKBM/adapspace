@@ -1,4 +1,4 @@
-
+<link rel="icon" type="image/png" href="../IMG/favicon.png" />
 <header class="header-desktop">
 
 <div class="section__content section__content--p30">

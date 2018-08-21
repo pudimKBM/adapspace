@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+ 
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
 	href="vendor/bootstrap/css/bootstrap.min.css">
@@ -107,7 +107,7 @@ if ($_SESSION['logged_in']) {
             
             ?>
 			
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class="col-sm-6">
 							<!-- Block2 -->
 							<div class="block2">
 								<div
@@ -134,7 +134,7 @@ if ($_SESSION['logged_in']) {
 										<div class="row" >
 											<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
 										</div >
-										<div class="row" >
+										<div class="row" style="font-size: 10px;" >
 											<span>DIAS : HORAS : MIN : SEG </span>
 										</div>
 								</div>

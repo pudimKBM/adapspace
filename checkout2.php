@@ -42,7 +42,7 @@
 <!-- Main CSS-->
 <link href="css/theme.css" rel="stylesheet" media="all">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+ 
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
 	href="vendor/bootstrap/css/bootstrap.min.css">
