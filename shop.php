@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>/
+<title>Home</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="images/icons/favicon.png" />
@@ -77,58 +76,13 @@ if ($_SESSION['logged_in']) {
 		</div>
 	</section>
 
-<<<<<<< HEAD
 	<!-- Content page -->
 	<section class="bgwhite p-t-55 p-b-65">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
-					<div class="leftbar p-r-20 p-r-0-sm">
-						<!--  
-						<h4 class="m-text14 p-b-7">Categorias</h4>
-
-						<ul class="p-b-54">
-							<li class="p-t-4"><a  class="s-text13 active1"> All </a>
-							</li>
-
-							<li class="p-t-4"><a  class="s-text13">Influencers </a></li>
-						</ul>
-
-						  
-
-
-						<div class="search-product pos-relative bo4 of-hidden">
-							<input class="s-text7 size6 p-l-23 p-r-50" type="text"
-								name="search-product" placeholder="Search Products...">
-
-							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
-							</button>
-						</div>
-						-->
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
-					<!--  -->
-					<div class="flex-sb-m flex-w p-b-35">
-<!-- 						<div class="flex-w"> -->
-<!-- 							<div -->
-<!-- 								class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10"> -->
-<!-- 								<select class="selection-2" name="sorting"> -->
-<!-- 									<option>Default Sorting</option> -->
-<!-- 									<option>Popularity</option> -->-->
-<!-- 									<option>Price: low to high</option> -->
-<!-- 									<option>Price: high to low</option> -->
-<!-- 								</select> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-					</div>
-=======
->>>>>>> xdxd
 
 					<!-- Product -->
-					<div class="your-class">
+					<div class="row">
 					<?php
     
     include 'db.php';
@@ -355,10 +309,6 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 			dropdownParent: $('#dropDownSelect1')
 		});
 	</script>
-
-
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
@@ -395,15 +345,6 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		    $this.html(event.strftime('%D : %H : %M : %S'));
 		  });
 		});
-		$(document).ready(function(){
-      $('.your-class').slick({
-        slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-      });
-    });
 	</script>
 
 	<!--===============================================================================================-->
