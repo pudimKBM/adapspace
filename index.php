@@ -58,7 +58,7 @@
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-4" hidden>
+                <div class="col-xs-12 col-sm-6 col-md-4" style="visibility: hidden">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -104,7 +104,7 @@
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <img class="card-img-top img-card" src="IMG/card-img2.png">
+                                        <img class="card-img-top img-card" src="IMG/luiz.jpg">
                                         <div class="card-body">
                                             <h4 class="card-title font-in">Luiz Moreno</h4>
                                             <h5 class="card-subtitle mb-2 font-in">Ator / Youtuber</h5>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-4" hidden>
+                <div class="col-xs-12 col-sm-6 col-md-4" style="visibility: hidden">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
