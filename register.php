@@ -99,7 +99,9 @@ error_reporting(0);
 <?php include 'header.php'?>
 
 <body>
+
 <div  class="conteiner">
+
 	<div class="page-wrapper">
 		<div class="page-content--bge5">
 			<div class="container">
@@ -160,7 +162,7 @@ error_reporting(0);
 							</form>
 							<div class="register-link">
 								<p>
-									Ja tem uma conta? <a href="login.php">Faça se login</a>
+									Ja tem uma conta? <a href="login.php">Faça seu login</a>
 								</p>
 								<p>
 								Esqueceu sua Senha <a href="forget-pass.php">clique-aqui</a>
@@ -174,7 +176,7 @@ error_reporting(0);
 
 	</div>
 	</div>
-
+	
 	<!-- Jquery JS-->
 	<script src="vendor2/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap JS-->
