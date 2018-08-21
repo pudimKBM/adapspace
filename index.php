@@ -58,7 +58,7 @@
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col">
+                <div class="col-xs-12 col-sm-6 col-md-4" hidden>
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -106,9 +106,9 @@
                                     <div class="card-body text-center">
                                         <img class="card-img-top img-card" src="IMG/card-img2.png">
                                         <div class="card-body">
-                                            <h4 class="card-title font-in">Yoda Junior</h4>
-                                            <h5 class="card-subtitle mb-2 font-in">Pro Player / Youtuber</h5>
-                                            <h5 class="card-subtitle mb-2 font-in">100.789 Seguidores</h6>
+                                            <h4 class="card-title font-in">Luiz Moreno</h4>
+                                            <h5 class="card-subtitle mb-2 font-in">Ator / Youtuber</h5>
+                                            <h5 class="card-subtitle mb-2 font-in">1.000.000 Seguidores</h6>
                                                 <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fas fa-angle-double-right"></i>
                         </span>
@@ -119,8 +119,8 @@
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
-                                        <h4 class="card-title font-in">Sunlimetech</h4>
-                                        <p class="card-text font-in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p>
+                                        <!-- <h4 class="card-title font-in">Sunlimetech</h4>
+                                        <p class="card-text font-in">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma </p> -->
                                         <span style="font-size: 1.7em; color: #11998e;">
                         <i class="fab fa-facebook-square "></i>
                         </span>
@@ -136,9 +136,9 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" hidden>
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
 
 
