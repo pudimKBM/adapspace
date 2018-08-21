@@ -134,7 +134,7 @@ if ($_SESSION['role'] == 'admin') {
 								<div class="overview-wrap">
 									<h2 class="title-1">Visão Geral</h2>
 									<?php if($_SESSION['role'] == "admin"){  ?>
-									<a href="https://adaptspace.com.br/admin/designer.php?id=1&category=Camisetas&icon=phone" class="au-btn au-btn-icon au-btn--blue">
+									<a href="designer.php?id=1&category=Camisetas&icon=phone" class="au-btn au-btn-icon au-btn--blue">
 										<i class="zmdi zmdi-plus"></i>Criar produto
 									</a>
 									<?php }?>
