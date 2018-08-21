@@ -1,10 +1,7 @@
 <?php
-session_start();
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
+
 include '../db.php';
-try{
+
 
 
 
@@ -56,9 +53,6 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
             header('location: designer.php?id=1&category=Camisetas&icon=phone');
         }
     }
-}catch(Exception $e){
-    echo $e->getMessage();
 
-}
 
  ?>

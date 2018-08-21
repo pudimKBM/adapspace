@@ -76,7 +76,7 @@ else {
 										<strong class="st">Checkout</strong>
                                     </div>
                                     <div class="row"> 
-                                    <form action="library/vendor/pagseguro/pagseguro-php-sdk/public/Checkout/createPaymentRequestLightbox.php" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                                    <form  method="post" onsubmit="PagSeguroLightbox(this); return false;">
 									        <div class="card-body card-block">
                                             
 									        	<div class="form-group">
@@ -172,7 +172,7 @@ else {
                                                     </div>
                                                 </div>        
                                             </div>
-										
+										<?php include 	"library/vendor/pagseguro/pagseguro-php-sdk/public/Checkout/createPaymentRequestLightbox.php" ?>
 						<input calss="col-md-6" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/120x53-comprar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             
                                 </form>
