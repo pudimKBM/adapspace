@@ -178,7 +178,7 @@ collor: black;
 </head>
 
 <?php
-ob_start();
+
 session_start();
 
 if (! isset($_SESSION['id'])  ) {
@@ -562,7 +562,7 @@ error_reporting(E_ALL);
 							<div id="avatarlist">
 							<?php
     
-    include '../db.php';
+    include 'db.php';
     $queryfirst = "SELECT * FROM `uploads` WHERE usr_id ='{$_SESSION['id']}' ORDER BY `uploads`.`id` DESC LIMIT 3";
     $resultfirst = $connection->query($queryfirst);
     if ($resultfirst->num_rows > 0) {
@@ -1442,12 +1442,11 @@ error_reporting(E_ALL);
     <script src="node_modules/bootstrap/js.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	<script type="text/javascript"
-		src="../vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="../vendor/countdowntime/countdowntime.js"></script>
 
 
  
  
 </script>
-<?php ob_end_flush(); }?></body>
+<?php }?></body>
 </html>
