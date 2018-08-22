@@ -141,14 +141,14 @@ if ($_SESSION['logged_in']) {
 										</div>
 								<p id=<?= $nomeid?>></p>
 
-								<div class="block2-txt p-t-20" style="margin-left: 16px;">
-									<a class="block2-name dis-block l-text1 p-b-5" style="font-size: 22px; color: #5f4949;">
+								<div class="block2-txt" style="margin-left: 20%;">
+									<a class="block2-name dis-block l-text1 p-b-5" style="font-size: 1em; color: #333;font-family: Arial;font-weight: bold;">
 										<?= $name_best; ?>
-									</a> <span class="block2-price l-text1 p-r-5" style="font-size: 22px; color: #5f4949;">
+									</a> <span class="block2-price l-text1 p-r-5" style="font-size: 1.2em; color: #333;font-family: Arial;font-weight: bold;">
 										R$<?= $price_best; ?>
 									</span>
 									
-					<div class="p-t-33 p-b-60">
+					<div style="padding-top: 5%;">
 						<div class="flex-m flex-w p-b-10">
 							
 
