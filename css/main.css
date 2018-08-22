@@ -122,11 +122,7 @@ body, html {
 	font-family: HWYGEXPD-Expanded;
 	font-weight: 400;
 }
-.block2-labelnew::before {
-    background-color: black;
-    content: 'New';
-    color: white;
-}
+
 /* ------------------------------------ */
 a {
 	font-family: HWYGCOND-Condesend;
@@ -1786,8 +1782,9 @@ li.sale-noti>a {
 }
 
 .block2-labelnew::before {
-	background-color: #66a8a6;
+	background-color: black;
 	content: 'New';
+	color: white;
 }
 
 /* ------------------------------------ */
