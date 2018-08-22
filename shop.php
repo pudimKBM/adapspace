@@ -107,7 +107,7 @@ if ($_SESSION['logged_in']) {
             
             ?>
 			
-						<div class="col-sm-6">
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
 								<div
@@ -134,10 +134,14 @@ if ($_SESSION['logged_in']) {
 										<div class="row" >
 											<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
 										</div >
-										<div class="row" style="font-size: 10px;" >
+										
+								</div>
+								<div class="row" style="
+    font-size: 18px;
+    margin-left: 6%;
+" >
 											<span>DIAS : HORAS : MIN : SEG </span>
 										</div>
-								</div>
 								<p id=<?= $nomeid?>></p>
 
 								<div class="block2-txt p-t-20" style="margin-left: 16px;">
@@ -326,6 +330,7 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 		<script type="text/javascript"
 		src="src/js/jquery.countdown.js"></script>
 	<script type="text/javascript">
+		
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
@@ -339,6 +344,13 @@ VALUES ('$id_pd','$quantity','$size','ordered', '$idsess', '$usrc_id')";
 				swal(nameProduct, "Adicionado a wishlist !", "success");
 			});
 		});
+		$('[data-countdown]').each(function() {
+		  var $this = $(this), finalDate = $(this).data('countdown');
+		  $this.countdown(finalDate, function(event) {
+		    $this.html(event.strftime('%D : %H : %M : %S'));
+		  });
+		});
+	
 		
 	</script>
 
