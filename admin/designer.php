@@ -556,11 +556,7 @@ error_reporting(E_ALL);
 							<form action="Uploadds.php" method="post" enctype="multipart/form-data">
 										Selecione uma imagem para adicionar:
 										<div class= "row" >
-<<<<<<< HEAD
-    									<input type="file" data-toggle="popover" title="Popover title" data-content="Voce pode mandar uma imagem .jpg, .png e .svg. Recomendamos imagen com resolção de 2400x3300 pixels." name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 " type="submit" value="Upload" name="submit">
-=======
     									<input type="file" name="fileToUpload" id="fileToUpload">   <input class=" col-sm-3 btn-success " type="submit" value="Upload" name="submit" style="border-radius: 300px;">
->>>>>>> pkbm-instagramgallery
  										</div>
 							</form>
 							<div id="avatarlist">
@@ -936,6 +932,7 @@ error_reporting(E_ALL);
 			valueSelect = $(this).val();
 			$("#tshirtFacing").attr("src",$(this).val());
         });
+		
         $('#flipback').click(
 		   function() {	
                if (valueSelect === "img/crew_front1.png") {
@@ -1237,6 +1234,21 @@ error_reporting(E_ALL);
 				dataInicio.dispatchEvent(event);
 					
 						$(document).ready(function(){
+							if (valueSelect === "img/mens_longsleeve_back.png" || valueSelect === "img/mens_longsleeve_fornt.png" ){
+								$("#Prc").on('change', function(){
+								if ($("#Prc").val()<55){
+									$(this).val(55);
+								}
+							}else if(valueSelect === "img/mens_hoodie_front.png" ||valueSelect === "img/mens_hoodie_back.png" ) {
+								$("#Prc").on('change', function(){
+								if ($("#Prc").val()<65){
+									$(this).val(65);
+								}
+
+							}else{
+
+						
+
 							$("#Prc").on('change', function(){
 								if ($("#Prc").val()<45){
 									$(this).val(45);
@@ -1302,7 +1314,7 @@ error_reporting(E_ALL);
 								
 							})
 						})
-						
+					}
 						$(document).ready(function(){
 							$('#vrau').hide();
 							$('#vrau2').hide();
