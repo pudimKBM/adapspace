@@ -31,7 +31,7 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="img2" src="IMG/banner-luiz.png" alt="Ricky-boring">
+                <img class="img2" src="IMG/banner-campanha-ebano.png" alt="Ébano">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
                 </div>
             </div>
