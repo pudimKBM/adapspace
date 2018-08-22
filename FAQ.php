@@ -3,10 +3,6 @@
 <?php
 session_start();
 
-if ($_SESSION['logged_in'] == 'True') {
-    header('Location: index');
-}
-error_reporting(0);
 
 ?>
 <head>
