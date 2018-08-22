@@ -1314,7 +1314,7 @@ error_reporting(E_ALL);
 								$("#prc").text("R$" + $('#Prc').val());
 								
 							})
-						})
+						
 					}
 					
 						$(document).ready(function(){
