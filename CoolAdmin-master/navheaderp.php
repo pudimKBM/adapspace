@@ -8,6 +8,14 @@
 <div class="account-wrap">
 <div class="account-item clearfix js-item-menu">
 <div class="image">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114440257-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114440257-1');
+</script>
 <img src="images/icon/avatar-01.jpeg" style="max-width: 100%" alt="John Doe" />
 </div>
 <div class="content">

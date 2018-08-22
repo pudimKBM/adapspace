@@ -1,3 +1,11 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114440257-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114440257-1');
+</script>
 <header class="header-mobile d-block d-lg-none">
 			<div class="header-mobile__bar">
 				<div class="container-fluid" style="">

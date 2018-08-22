@@ -13,6 +13,14 @@
 <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114440257-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114440257-1');
+</script>
 <script type="text/javascript" src="js/fabric.min.js"></script>
 <script type="text/javascript" src="js/tshirtEditor.js"></script>
 <script type="text/javascript" src="js/jquery.miniColors.min.js"></script>

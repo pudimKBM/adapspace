@@ -6,13 +6,17 @@ session_start();
 
 ?>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114440257-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'GA_TRACKING_ID');
+  gtag('config', 'UA-114440257-1');
+</script>
 </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
