@@ -130,16 +130,13 @@ if ($_SESSION['logged_in']) {
 										</div>
 									</div>
 								</div>
-								<div  class="row countdonw_container" style="margin-left: 38px;">
-										<div class="row" >
-											<span class="countdown_name"  data-countdown="<?=$exp_date?>"></span>
+								<div  class="row countdonw_container" style="align-content: center;margin-left: 25%;">
+										<div class="text-center" >
+											<span class="countdown_name" style="align-content: center;" data-countdown="<?=$exp_date?>"></span>
 										</div >
 										
 								</div>
-								<div class="row" style="
-    font-size: 18px;
-    margin-left: 6%;
-" >
+								<div class="row" style="font-size: 1em;align-content: center;margin-left: 20%;" >
 											<span>DIAS : HORAS : MIN : SEG </span>
 										</div>
 								<p id=<?= $nomeid?>></p>
