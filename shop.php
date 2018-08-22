@@ -145,7 +145,7 @@ if ($_SESSION['logged_in']) {
 									<a class="block2-name dis-block l-text1 p-b-5" style="font-size: 1em; color: #333;font-family: Arial;font-weight: bold;">
 										<?= $name_best; ?>
 									</a> <span class="block2-price l-text1 p-r-5" style="font-size: 1.2em; color: #333;font-family: Arial;font-weight: bold;">
-										R$<?php  (fmod($price_best, 1) !== 0.00)  ? echo $price_best : echo $price_best . ',00'; ?>
+										R$<?php  echo number_format($price_best, 2, ',', ''); ?>
 									</span>
 									
 					<div style="padding-top: 5%;">
