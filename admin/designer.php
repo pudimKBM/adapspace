@@ -1233,23 +1233,7 @@ error_reporting(E_ALL);
 				var event = new Event("focusout");
 				dataInicio.dispatchEvent(event);
 					
-					//	$(document).ready(function(){
-					//		if (valueSelect === "img/mens_longsleeve_back.png" || valueSelect === "img/mens_longsleeve_fornt.png" ){
-					//			$("#Prc").on('change', function(){
-					//			if ($("#Prc").val()<55){
-					//				$(this).val(55);
-					//			}
-					//		}else if(valueSelect === "img/mens_hoodie_front.png" ||valueSelect === "img/mens_hoodie_back.png" ) {
-					//			$("#Prc").on('change', function(){
-					//			if ($("#Prc").val()<65){
-					//				$(this).val(65);
-					//			}
-					//			})
-
-					//		}else{
-
-						
-
+						$(document).ready(function(){
 							$("#Prc").on('change', function(){
 								if ($("#Prc").val()<45){
 									$(this).val(45);
@@ -1314,9 +1298,8 @@ error_reporting(E_ALL);
 								$("#prc").text("R$" + $('#Prc').val());
 								
 							})
+						})
 						
-					}
-					
 						$(document).ready(function(){
 							$('#vrau').hide();
 							$('#vrau2').hide();
