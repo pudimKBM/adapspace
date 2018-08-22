@@ -17,7 +17,7 @@
       
     $mail->addAddress("$email", "$firstname");
     
-    $mail->Subject = 'Bem-vindo à Adapt Space';
+    $mail->Subject = 'Bem-vindo a Adapt Space';
     $mail->msgHTML("
     <html>
     <head>

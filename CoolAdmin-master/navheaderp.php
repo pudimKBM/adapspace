@@ -16,7 +16,7 @@
 
   gtag('config', 'UA-114440257-1');
 </script>
-<img src="images/icon/avatar-01.jpeg" style="max-width: 100%" alt="John Doe" />
+<img src="../IMG/favicon.png" style="max-width: 100%" alt="John Doe" />
 </div>
 <div class="content">
 <?php 

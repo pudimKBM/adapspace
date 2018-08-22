@@ -12,6 +12,10 @@ class ComposerStaticInit279979b8b3aed4b1c75b8def744f0f8c
             'PagSeguro\\' => 10,
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'D' => 
+        array (
+            'Ds\\' => 3,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -22,6 +26,10 @@ class ComposerStaticInit279979b8b3aed4b1c75b8def744f0f8c
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Ds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-ds/php-ds/src',
         ),
     );
 
