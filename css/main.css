@@ -105,11 +105,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 */
 .countdonw_container{
 	margin-left: 5px;
-	background-color: #19DDAE;
 }
 .countdown_name{
 	font-size: 30px;
-
+	background: #19DDAE;
+	border-radius: 5px;
 }
 * {
 	margin: 0px;
