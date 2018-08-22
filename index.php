@@ -26,19 +26,12 @@
     <div id="mama" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">  
             <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
         </ol>
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="img2" src="IMG/banner-home.JPG" alt="">
+                <img class="img2" src="IMG/banner-home-new.JPG">
                 <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="img2" src="IMG/Banner.jpg" alt="escreve aqui antonio">
-                <div class="carousel-caption mb-5 d-none d-block d-md-block">
-                    <a href="register.php" class="btn btn-outline-info">Comece por aqui.</a>
                 </div>
             </div>
         </div>

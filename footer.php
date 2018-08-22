@@ -12,7 +12,11 @@
                         </li>
                         <li class="list-inline-item">⋅</li>
                         <li class="list-inline-item">
-                            <a href="#">Termos de Uso</a>
+                            <a href="Termos e condicoes.php">Termos de Uso</a>
+                        </li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item">
+                            <a href="FAQ.php">FAQ</a>
                         </li>
 
                     </ul>

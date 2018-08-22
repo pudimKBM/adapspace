@@ -145,7 +145,7 @@ error_reporting(0);
 								</div>
 								<div class="login-checkbox">
 									<label> <input type="checkbox" name="aggree"
-										required="required">Aceito os termos e políticas de Privacidade
+										required="required">Aceito os <a href="Termos e condicoes.php">termos e políticas de privacidade</a>
 									</label>
 								</div>
                                 <?php require 'includes/signupconfirmation.php'; ?>

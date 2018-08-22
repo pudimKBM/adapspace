@@ -70,7 +70,16 @@ if ($_SESSION['logged_in']) {
 					</div>
 				</div>
 
-				
+				<div class="item-slick1 item1-slick1"
+					style="background-image: url(IMG/banner-cronometro.JPG);">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+						<div class="wrap-btn-slide1 w-size1 animated visible-false zoomIn visible-true" data-appear="zoomIn">
+							<!-- Button -->
+							
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</div>
