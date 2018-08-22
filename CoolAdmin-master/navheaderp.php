@@ -43,7 +43,7 @@ if ($resultuser_db2->num_rows > 0) {
 										<div class="account-dropdown js-dropdown">
 											<div class="info clearfix">
 												<div class="image">
-													<a href="#"> <img src="images/icon/avatar-01.jpeg"
+													<a href="#"> <img src="../IMG/favicon.png"
 														alt="John Doe" />
 													</a>
 												</div>

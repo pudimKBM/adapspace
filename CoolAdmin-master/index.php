@@ -124,7 +124,33 @@ if ($_SESSION['role'] == 'admin-m') {
 			<!-- HEADER DESKTOP-->
 			<?php include 'navheaderp.php';?>
 			<!-- HEADER DESKTOP-->
+<?php 
+									//	require_once 'vendor/autoload.php';
+									//	ini_set('display_errors',1);
+									//	ini_set('display_startup_erros',1);
+									//	error_reporting(E_ALL);
+									//		include 'db.php';
+									//	$querycanvas = "SELECT CONVERT(dat, date) as 'DATA',COUNT(id) as 'qtd' FROM `command` WHERE id_usr_create = 33 GROUP BY CONVERT(dat, date)" ;
+									//	$querycanvasresult = $connection->query($querycanvas);
+									//	$sequencedat = new \Ds\Vector();
+									//	$sequenceqtd =  new \Ds\Vector();
+									//	 if ($querycanvasresult->num_rows >0) {
+									//		while ($rowsvec = $querycanvasresult->fetch_assoc()) {
+									//			$dat = $rowsvec['DATA'];
+									//			$qtd = $rowsvec['qtd'];
+									//			$sequenceqtd->push($qtd);
+									//			$sequencedat->push($dat);
+									//		}
+									//		 
+									//	 }
 
+									//	 
+
+
+									//	echo $sequencedat;
+									//	echo $sequenceqtd;
+									
+										?>
 			<!-- MAIN CONTENT-->
 			<div class="main-content">
 				<div class="section__content section__content--p30">
@@ -417,7 +443,7 @@ ORDER BY SUM(command.id_user) DESC ";
 		</div>
 
 	</div>
-
+	
 	<!-- Jquery JS-->
 	<script src="vendor/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap JS-->
@@ -441,72 +467,7 @@ ORDER BY SUM(command.id_user) DESC ";
 
 	<!-- Main JS-->
 	<script src="js/main.js"></script>
-	<?php 
-										try {
-											include 'db.php';
-										$querycanvas = "SELECT * FROM `command`WHERE id_usr_create = {$_SESSION['id']}  GROUP BY dat" ;
-										$querycanvasresult = $connection->query($querycanvas);
-										$sequencedat = new \Ds\Vector();
-										$sequenceqtd =  new \Ds\Vector();
-										 if ($querycanvasresult->num_rows()>0) {
-											while ($rowsvec = $querycanvasresult->fetch_assoc()) {
-												$dat = $rowsvec['dat'];
-												$dat = substr($dat,  0 , 10);
-												$querycanvasresult2 = "SELECT * FROM `command` where id_usr_create = {$_SESSION['id']} AND CONVERT(dat, date) = '$dat'";
-												$querycanvasresult2 = $connection->query($querycanvasresult2);
-												if ($querycanvasresult2->num_rows()> 0 ) {
-													$qtdprod = $querycanvasresult2->num_rows();
-														$sequenceqtd->push($qtdprod);
-												}
-												$sequencedat->push($dat);
-											}
-											 
-										 }
-
-										 
-
-
-										echo "
-										<script>
-										 var ctx = document.getElementById('widgetChart4');
-										if (ctx) {
-										  ctx.height = 115;
-										  var myChart = new Chart(ctx, {
-											type: 'bar',
-											data: {
-											  labels: $sequencedat,
-											  datasets: [
-												{
-												  label: 'My First dataset',
-												  data: $sequenceqtd,
-												  borderColor: 'transparent',
-												  borderWidth: '0',
-												  backgroundColor: 'rgba(255,255,255,.3)''
-												}
-											  ]
-											},
-											options: {
-											  maintainAspectRatio: true,
-											  legend: {
-												display: false
-											  },
-											  scales: {
-												xAxes: [{
-												  display: false,
-												  categoryPercentage: 1,
-												  barPercentage: 0.65
-												}],
-												yAxes: [{
-												  display: false
-												}]
-											  }
-											}
-										  });
-										}</script>";
-									}catch(Exeption $e){
-											echo $e->getMessage();
-									}
-										?>
+	
 
 </body>
 
