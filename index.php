@@ -105,8 +105,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-check m-auto text-success"></i>
               </div>
-              <h3>Camisetas e personalizadas e limitadas</h3>
-              <p class="lead mb-0">Sua camiseta será exclusiva, personalizada por você, do seu jeito.</p>
+              <h3>Camisetas personalizadas e limitadas</h3>
+              <p class="lead mb-0">Sua camiseta será exclusiva, personalizada por você do seu jeito.</p>
             </div>
           </div>
         </div>
