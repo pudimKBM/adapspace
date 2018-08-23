@@ -22,6 +22,40 @@
     background-image: none;
     border-color: #17a2b8;
 }
+.testimonials {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+  }
+  
+  .testimonials .testimonial-item {
+	max-width: 18rem;
+  }
+  
+  .testimonials .testimonial-item img {
+	max-width: 12rem;
+	box-shadow: 0px 5px 5px 0px #adb5bd;
+  }
+
+  .features-icons {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+  }
+  
+  .features-icons .features-icons-item {
+	max-width: 20rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon {
+	height: 7rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon i {
+	font-size: 4.5rem;
+  }
+  
+  .features-icons .features-icons-item:hover .features-icons-icon i {
+	font-size: 5rem;
+  }
 </style>
     <div id="mama" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">  
