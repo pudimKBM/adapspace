@@ -88,7 +88,7 @@
                 <i class="icon-screen-desktop m-auto text-success"></i>
               </div>
               <h3>100% Digital</h3>
-              <p class="lead mb-0">Crie sua camiseta em alguns cliques sem sair da sua cara.</p>
+              <p class="lead mb-0">Crie sua camiseta em alguns cliques sem sair da sua casa.</p>
             </div>
           </div>
           <div class="col-lg-4">
