@@ -118,15 +118,19 @@
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col-sm-4 col-sm-offset-5 mx-auto text-center">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="IMG/ebano.jpg" style="width: 100%;">
-                        <h5>Ébano</h5>
-                        <h5>Marca</h5>
-                        <h6 class="mb-0">124 Seguidores</h6>
-                        <p class="font-weight-light mb-0">Uma marca sem definições ou rótulos. Personalidade é tudo.</p>
+                <section class="testimonials text-center bg-light">
+                    <div class="container">
+                        <div class="col-sm-4 col-sm-offset-5 mx-auto text-center">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="IMG/ebano.jpg" style="width: 100%;">
+                                <h3>Ébano</h3>
+                                <h4>Marca</h4>
+                                <h5 class="mb-0">124 Seguidores</h5>
+                                <h5 class="font-weight-light">Uma marca sem definições ou rótulos. Personalidade é tudo.</h5>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>
