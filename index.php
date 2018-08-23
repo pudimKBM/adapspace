@@ -120,7 +120,7 @@
                 <!-- Team member -->
                 <div class="col-sm-4 col-sm-offset-5 mx-auto text-center">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="IMG/ebano2.jpg" style="width: 100%;">
+                        <img class="img-fluid rounded-circle mb-3" src="IMG/ebano.jpg" style="width: 100%;">
                         <h3>Ébano</h3>
                         <h4>Marca</h4>
                         <h5 class="mb-0">124 Seguidores</h5>
