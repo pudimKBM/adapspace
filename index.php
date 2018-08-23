@@ -45,53 +45,54 @@
             <span class="sr-only">Avançar</span>
         </a>
     </div>
+     <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-success"></i>
+              </div>
+              <h3>100% Digital</h3>
+              <p class="lead mb-0">Crie sua camiseta em alguns cliques sem sair da sua cara.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-layers m-auto text-success"></i>
+              </div>
+              <h3>Use sua influência</h3>
+              <p class="lead mb-0">Seu único trabalho será criar e divulgar a sua camapanha, o resto nós fazemos.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-check m-auto text-success"></i>
+              </div>
+              <h3>Camisetas e personalizadas e limitadas</h3>
+              <p class="lead mb-0">Sua camiseta será exclusiva, personalizada por você, do seu jeito.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section> 
+
     <section id="team">
         <div class="container">
             <h2 class="text-center "><span class="font-in">Campanhas</span></h2>
             <div class="row pt-5">
                 <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-3 mx-auto" >
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <img class="card-img-top img-card" src="IMG/ebano.jpg">
-                                        <div class="card-body">
-                                        <h4 class="card-title font-in">Ébano</h4>
-                                            <h5 class="card-subtitle mb-2 font-in">Marca</h5>
-                                            <h5 class="card-subtitle mb-2 font-in">124 Seguidores</h6>
-                                                <span style="font-size: 1.7em; color: #11998e;">
-                        <i class="fas fa-angle-double-right"></i>
-                        </span>     
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title font-in">Somos a Ébano</h4>
-                                        <p class="card-text font-in">Uma marca sem definições ou rótulos. Personalidade é tudo.</p>
-                                        <span style="font-size: 1.7em; color: #11998e;">
-                        <i class="fab fa-facebook-square "></i>
-                        </span>
-                                        <span style="font-size: 1.7em; color: #11998e;">
-                        <i class="fab fa-twitter-square "></i>
-                        </span>
-                                        <span style="font-size: 1.7em; color: #11998e;">
-                        <i class="fab fa-instagram "></i>
-                        </span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-sm-4 col-sm-offset-5 mx-auto text-center">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3" src="IMG/ebano.jpg" style="width: 100%;">
+                        <h5>Ébano</h5>
+                        <h5>Marca</h5>
+                        <h6 class="mb-0">124 Seguidores</h6>
+                        <p class="font-weight-light mb-0">Uma marca sem definições ou rótulos. Personalidade é tudo.</p>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </section>
