@@ -116,7 +116,7 @@ if ($_SESSION['logged_in']) {
             
             ?>
 			
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class="col-sm-12 col-md-6 col-lg-4 ">
 							<!-- Block2 -->
 							<div class="block2">
 								<div
@@ -130,13 +130,7 @@ if ($_SESSION['logged_in']) {
 											aria-hidden="true"></i>
 										</a>
 										<form method="post" >
-										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-										<!--<a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="product-detail.php?id" > Comprar</a> -->
-											<button  type="submit" value="buy" name="buy"
-												class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"> 
-												Comprar</button> 
-										</div>
+										
 									</div>
 								</div>
 								<div  class="row countdonw_container" style="align-content: center;margin-left: 25%;">
@@ -172,7 +166,9 @@ if ($_SESSION['logged_in']) {
 								</select>
 							</div>
 						</div>
-
+						<button  type="submit" value="buy" name="buy"
+												class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" style="width: 82%;"> 
+												Comprar</button> 
 						<!-- 					<div class="flex-m flex-w"> -->
 						<!-- 						<div class="s-text15 w-size15 t-center"> -->
 						<!-- 							Color -->
@@ -190,7 +186,11 @@ if ($_SESSION['logged_in']) {
 						<!-- 
 											</div> -->
 						
-						
+											<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+										<!--<a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="product-detail.php?id" > Comprar</a> -->
+											
+										</div>
 						
 
 						<div class="flex-r-m flex-w p-t-10">
