@@ -43,6 +43,7 @@
 <body class="">
 <?php
 include 'db.php';
+
 session_start();
 
 if (! isset($_SESSION['logged_in']) or ! isset($_SESSION['id'])) {
@@ -76,7 +77,7 @@ else {
 										<strong class="st">Checkout</strong>
                                     </div>
                                     <div class="row"> 
-                                    <form  method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                                    <form class="col" action="library/vendor/pagseguro/pagseguro-php-sdk/public/Checkout/createPaymentRequestLightbox.php" method="post" onsubmit="PagSeguroLightbox(this); return false;">
 									        <div class="card-body card-block">
                                             
 									        	<div class="form-group">
@@ -162,17 +163,17 @@ else {
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="CPF" class=" form-control-label"> Telefone </label> <input type="tel" name ="tel1" id="celular" placeholder="55555555555" class="form-control"  rquired>
+                                                            <label for="CPF" class=" form-control-label"> Celular1 </label> <input type="tel" name ="tel1" id="celular" placeholder="55555555555" class="form-control"  rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="tel" class=" form-control-label"> Celular </label> <input type="tel" id="celular" name= "tel2" placeholder="(11)xxxx-xxxx" class="form-control" rquired>
+                                                            <label for="tel" class=" form-control-label"> Celular2 </label> <input type="tel" id="celular" name= "tel2" placeholder="(11)xxxx-xxxx" class="form-control" rquired>
                                                         </div>
                                                     </div>
                                                 </div>        
                                             </div>
-										<?php include 	"library/vendor/pagseguro/pagseguro-php-sdk/public/Checkout/createPaymentRequestLightbox.php" ?>
+										
 						<input calss="col-md-6" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/120x53-comprar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             
                                 </form>

@@ -40,6 +40,7 @@ $qins =  "INSERT INTO `pedidos`(`nome`, `sobrenome`, `nasc`, `sex`, `cpf`, `fone
  VALUES ('$name','$name2','$nasc','$sex',$cpf,$fone,$fone2,'$rua',
 $numero,'$bairo','$comp','$cid','$est','$pais','$cep','{$_SESSION['id']}')";
 $connection->query($qins);
+$payment->setSender()->setName("$name $name2");
 /**
  * Nome completo do comprador. Especifica o nome completo do comprador que está realizando o pagamento. Este campo é
  * opcional e você pode enviá-lo caso já tenha capturado os dados do comprador em seu sistema e queira evitar que ele
@@ -76,7 +77,7 @@ if($result->num_rows >0 ){
     $query =  "UPDATE command SET id_ped = $id_ped WHERE id= $cid";
 }
 }
-$payment->setSender()->setName("$name"." ". "$name2");
+
 
 /**
  * E-mail do comprador. Especifica o e-mail do comprador que está realizando o pagamento. Este campo é opcional e você
