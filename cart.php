@@ -90,7 +90,7 @@ else {
                                                                 <label for="company" class=" form-control-label">Sobrenome</label>
                                                             <input type="text" id="nome2" name= "nome2" placeholder="Digite seu sobrenome" class="form-control" rquired>
                                                         </div>
-                                                        <div class="col-sm-2">
+                                                        <div class="col-sm">
                                                         <div class="form-group">
                                                             
                                                             <label for="vat" class=" form-control-label"></label>Data de nascimento <input type="date" id="datanas" name="nasc" class="form-control" max="2000-01-01" rquired>
@@ -145,7 +145,7 @@ else {
 													
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="postal-code" class=" form-control-label"> Numero </label> <input type="number" name="numero" id="numeroC" placeholder="Numero da casa" class="form-control" rquired>
+                                                            <label for="postal-code" class=" form-control-label"> Número </label> <input type="number" name="numero" id="numeroC" placeholder="Número da casa" class="form-control" rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
@@ -167,7 +167,7 @@ else {
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="CPF" class=" form-control-label"> Celular1 </label> <input type="tel" name ="tel1" id="celular" placeholder="55555555555" class="form-control"  rquired>
+                                                            <label for="CPF" class=" form-control-label"> Celular1 </label> <input type="tel" name ="tel1" id="celular" placeholder="(11)xxxx-xxxx" class="form-control"  rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
