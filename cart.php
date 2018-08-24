@@ -93,13 +93,17 @@ else {
                                                         <div class="col-sm-2">
                                                         <div class="form-group">
                                                             
-                                                            <label for="vat" class=" form-control-label"></label>Data de nascimento <input type="date" id="datanas" name="nasc" class="form-control" rquired>
+                                                            <label for="vat" class=" form-control-label"></label>Data de nascimento <input type="date" id="datanas" name="nasc" class="form-control" max="2000-01-01" rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-2">
                                                         <div class="form-group">
                                                             
-                                                            <label for="vat" class=" form-control-label"></label>Sexo <input type="text" id="sex" name="sex" placeholder="M" class="form-control" rquired>
+                                                            <label for="vat" class=" form-control-label">Sexo</label><!--<input type="text" id="sex" name="sex" placeholder="M" class="form-control" rquired>-->
+																					<select class="custom-select col" name="sex" required>
+																						<option class="dropdown-item" >M</option>
+																						<option class="dropdown-item">F</option>
+																					</select>
                                                         </div>
                                                     </div>
                                                     </div>
@@ -141,12 +145,12 @@ else {
 													
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="postal-code" class=" form-control-label"> Numero </label> <input type="number" name="numero" id="numeroC" placeholder="Postal Code" class="form-control" rquired>
+                                                            <label for="postal-code" class=" form-control-label"> Numero </label> <input type="number" name="numero" id="numeroC" placeholder="Numero da casa" class="form-control" rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="postal-code" class=" form-control-label"> Bairro </label> <input type="text" name="bairro" id="bairro" placeholder="Postal Code" class="form-control">
+                                                            <label for="postal-code" class=" form-control-label"> Bairro </label> <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
@@ -158,7 +162,7 @@ else {
                                                 <div class="row">
 												<div class="col-sm">
                                                         <div class="form-group">
-                                                            <label for="postal-code" class=" form-control-label"> CPF </label> <input type="number" id="cpf" name="cpf" placeholder="Postal Code" class="form-control" rquired>
+                                                            <label for="postal-code" class=" form-control-label"> CPF </label> <input type="number" id="cpf" name="cpf" placeholder="CPF somente em numeros" maxlength="11" class="form-control" rquired>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm">
@@ -225,10 +229,7 @@ if ($resultTotal->num_rows >0 ){
 				</div>
 
 				<!--  -->
-				<div class="flex-w flex-sb-m p-t-26 p-b-30">
-					<span class="m-text22 w-size19 w-full-sm"> Total: </span> <span
-						class="m-text21 w-size20 w-full-sm" id='XD'> $39.00 </span>
-				</div>
+				
 
 				
 			</div>
